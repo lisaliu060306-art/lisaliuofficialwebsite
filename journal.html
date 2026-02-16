@@ -46,6 +46,22 @@
       border-radius: 20px;
       font-size: 0.8rem;
     }
+    .filter-badge {
+      cursor: pointer;
+      padding: 0.5rem 1.2rem;
+      background: #f0f0f0;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .filter-badge:hover {
+      background: #ffe66d;
+      color: #054a47;
+    }
+    .filter-badge.active {
+      background: #ffe66d;
+      color: #054a47;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -115,76 +131,101 @@
       
       <!-- Journal Categories -->
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-        <span class="badge" style="cursor: pointer;" onclick="filterJournal('all')">All Posts</span>
-        <span class="badge" style="cursor: pointer;" onclick="filterJournal('reflection')">Reflections</span>
-        <span class="badge" style="cursor: pointer;" onclick="filterJournal('travel')">Travel</span>
-        <span class="badge" style="cursor: pointer;" onclick="filterJournal('art')">Art & Science</span>
-        <span class="badge" style="cursor: pointer;" onclick="filterJournal('music')">Music</span>
+        <span class="filter-badge active" onclick="filterJournal('all')">All Posts</span>
+        <span class="filter-badge" onclick="filterJournal('reflection')">Reflections</span>
+        <span class="filter-badge" onclick="filterJournal('travel')">Travel</span>
+        <span class="filter-badge" onclick="filterJournal('personal')">Personal</span>
+        <span class="filter-badge" onclick="filterJournal('mindset')">Mindset</span>
+        <span class="filter-badge" onclick="filterJournal('growth')">Growth</span>
       </div>
 
-      <!-- Journal Entries -->
+      <!-- Journal Entries  -->
       <div class="journal-grid" id="journalEntries">
-        <div class="journal-entry" data-category="music">
+        <div class="journal-entry" data-tags="reflection travel">
           <div class="journal-date">February 15, 2026</div>
           <h3>Fate & Wandering</h3>
           <p>I had forgotten. Forgotten how the world looks when it is moving and you are still. Forgotten how glass holds...</p>
-          <div class="journal-tags"><span class="journal-tag">reflection</span><span class="journal-tag">travel</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">reflection</span>
+            <span class="journal-tag">travel</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full entry →</a>
         </div>
         
-        <div class="journal-entry" data-category="reflection">
+        <div class="journal-entry" data-tags="reflection mindset life">
           <div class="journal-date">Feburary 10, 2026</div>
           <h3>The Warmth That We Carry</h3>
           <p>Sometimes, I feel like a spectator in this world. I am not lost; I am simply walking a path different from most...</p>
-          <div class="journal-tags"><span class="journal-tag">mindset</span><span class="journal-tag">life</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">mindset</span>
+            <span class="journal-tag">life</span>
+          </div>
           <a href="https://medium.com/@lisaliu20060306/the-warms-that-we-carry-94528eb97236" class="read-more" style="color: #00605f;">Read full entry →</a>
         </div>
 
-        <div class="journal-entry" data-category="travel">
+        <div class="journal-entry" data-tags="personal passion travel">
           <div class="journal-date">January 31, 2026</div>
           <h3>The Chord She Became</h3>
           <p>The fantasy begins like she is seeing the piano for the first time. She can't stop looking at...</p>
-          <div class="journal-tags"><span class="journal-tag">personal</span><span class="journal-tag">passion</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">personal</span>
+            <span class="journal-tag">passion</span>
+          </div>
           <a href="https://medium.com/@lisaliu20060306/the-chord-she-became-114119041222" class="read-more" style="color: #00605f;">Read full entry →</a>
         </div>
 
-        <div class="journal-entry" data-category="art">
+        <div class="journal-entry" data-tags="review introspection art">
           <div class="journal-date">Nov 1, 2025</div>
           <h3>My Self</h3>
           <p>Maybe this is the self I reach for-<br>a sky washed clean by rain, <br>where feelings rise like clouds,<br> visible yet free to roam...</p>
-          <div class="journal-tags"><span class="journal-tag">review</span><span class="journal-tag">introspection</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">review</span>
+            <span class="journal-tag">introspection</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full poem →</a>
         </div>
         
-        <div class="journal-entry" data-category="reflection">
+        <div class="journal-entry" data-tags="rhythm solitude reflection">
           <div class="journal-date">Sept 18, 2025</div>
           <h3>Indigo Shallows</h3>
           <p>Moonlight spills like water, soundless, over these leaves. Thin mist rises from the lotus pond, a pale blue breath...</p>
-          <div class="journal-tags"><span class="journal-tag">rhythm</span><span class="journal-tag">solitude</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">rhythm</span>
+            <span class="journal-tag">solitude</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full entry →</a>
         </div>
         
-        <div class="journal-entry" data-category="reflection">
+        <div class="journal-entry" data-tags="freedom balance reflection">
           <div class="journal-date">May 15, 2025</div>
           <h3>The Fire Unbound</h3>
           <p>I crave a touch, a soul that mirrors flame, <br>A breath that knows the hush before a name...</p>
-          <div class="journal-tags"><span class="journal-tag">freedom</span><span class="journal-tag">balance</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">freedom</span>
+            <span class="journal-tag">balance</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full poem →</a>
         </div>
         
-        <div class="journal-entry" data-category="reflection">
+        <div class="journal-entry" data-tags="growth fantasy reflection">
           <div class="journal-date">April 23, 2025</div>
           <h3>Towards The Endless Sea</h3>
           <p>I dreamed of a sea beyod the edge,<br>no crashing waves, no jagged stone...</p>
-          <div class="journal-tags"><span class="journal-tag">growth</span><span class="journal-tag">fantasy</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">growth</span>
+            <span class="journal-tag">fantasy</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full poem →</a>
         </div>
         
-        <div class="journal-entry" data-category="reflection">
+        <div class="journal-entry" data-tags="growth fantasy reflection">
           <div class="journal-date">Feburary 6, 2025</div>
           <h3>When Green Whispers Fade</h3>
           <p>Beneath mountains of silent debris,<br>a lone watcher traces stars, <br>carrying a fragile green spark...</p>
-          <div class="journal-tags"><span class="journal-tag">growth</span><span class="journal-tag">fantasy</span></div>
+          <div class="journal-tags">
+            <span class="journal-tag">growth</span>
+            <span class="journal-tag">fantasy</span>
+          </div>
           <a href="#" class="read-more" style="color: #00605f;">Read full poem →</a>
         </div>
       </div>
@@ -230,8 +271,23 @@
   <script>
     function filterJournal(category) {
       const entries = document.querySelectorAll('.journal-entry');
+      const filters = document.querySelectorAll('.filter-badge');
+      
+      filters.forEach(filter => {
+        filter.classList.remove('active');
+        if (filter.textContent.toLowerCase().includes(category) || 
+            (category === 'all' && filter.textContent.includes('All'))) {
+          filter.classList.add('active');
+        }
+      });
+      
+      // Filter entries
       entries.forEach(entry => {
-        if (category === 'all' || entry.dataset.category === category) {
+        const tags = entry.dataset.tags || '';
+        
+        if (category === 'all') {
+          entry.style.display = 'block';
+        } else if (tags.includes(category)) {
           entry.style.display = 'block';
         } else {
           entry.style.display = 'none';
