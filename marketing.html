@@ -21,7 +21,7 @@
     <div class="dot" style="top: 50%; right: 12%;"></div>
   </div>
 
-  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; flex-wrap: wrap;">
     
     <!-- LEFT SIDE COLUMN - NAVIGATION (SAME ON ALL PAGES) -->
     <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
@@ -78,15 +78,15 @@
 
     <!-- RIGHT SIDE - MARKETING CONTENT -->
     <div style="flex: 1;">
-      <div class="section-title" style="margin-bottom: 2rem;"><i class="fa-regular fa-lightbulb"></i> MARKETING & DESIGN</div>
+      <div class="section-title" style="margin-bottom: 2rem; flex-wrap: wrap;"><i class="fa-regular fa-lightbulb"></i> MARKETING & DESIGN</div>
       
       <!-- Marketing Grid -->
       <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
         <!-- Grangou Card -->
         <div class="marketing-card" onclick="window.open('https://drive.google.com/drive/folders/1-mCa-quLFsM_Yic0m5b2vpUHRmtJ2TWm', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #4ecdc4;">
           <img src="https://img1.wsimg.com/isteam/ip/7b260b55-7f0f-4a42-8308-fcae0a9d8f0f/ChatGPT%20Image%20Jul%2011%2C%202025%2C%2005_10_25%20AM.png"
-       alt="Grangou Logo"
-       style="width: 100%; height: 140px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;">
+               alt="Grangou Logo"
+               style="width: 100%; height: 140px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;">
           <h3>Grangou</h3>
           <p>Marketing Communication · Static Posts, Graphic Design, Brand Visuals, Social Media Strategy</p>
           <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
@@ -100,9 +100,8 @@
         <!-- Breefly Card -->
         <div class="marketing-card" onclick="window.open('https://drive.google.com/drive/folders/1-aKwT-u-VukGYVWeoaajeEa1ANKD6vt_', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #4ecdc4;">
           <img src="https://breefly.org/og-image.png"
-       alt="Breefly Logo"
-       style="width: 100%; height: 140px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;">
-
+               alt="Breefly Logo"
+               style="width: 100%; height: 140px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;">
           <h3>Breefly</h3>
           <p>Social Campaigns · User Growth Strategy, Content Creation, Analytics, Community Management</p>
           <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
@@ -113,61 +112,66 @@
           <a href="https://drive.google.com/drive/folders/1-aKwT-u-VukGYVWeoaajeEa1ANKD6vt_" target="_blank" style="color: #00605f;">View Projects →</a>
         </div>
       </div>
+      
       <!-- MARKETING PORTFOLIO FOLDER -->
       <div style="background: white; border-radius: 30px; padding: 2rem; margin: 2.5rem 0; border-left: 12px solid #4ecdc4;">
         <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
           <div style="font-size: 3rem; background: linear-gradient(135deg, #4ecdc4, #2df8ff); width: 80px; height: 80px; border-radius: 30px; display: flex; align-items: center; justify-content: center; color: white;">
             <i class="fa-solid fa-folder-open"></i>
           </div>
-          <div style="flex: 1;">
+          <div style="flex: 1; min-width: 250px;">
             <h3 style="color: #054a47; font-size: 1.8rem; margin-bottom: 0.3rem;">Social Media & Poster Design</h3>
             <p style="color: #333; font-size: 1.1rem;">Complete collection of graphic design work, social media assets, and promotional posters.</p>
           </div>
-          <a href="https://drive.google.com/drive/folders/1-FPtMBavF8TXFe-wgyLSBXt3JKwF0FvS?usp=sharingE" target="_blank" style="background: #4ecdc4; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <a href="https://drive.google.com/drive/folders/1-FPtMBavF8TXFe-wgyLSBXt3JKwF0FvS?usp=sharingE" target="_blank" style="background: #4ecdc4; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
             <i class="fa-solid fa-eye"></i> View Full Portfolio →
           </a>
         </div>
       </div>
 
-      <!-- Marketing Stats -->
-       <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem;">
-          <div style="font-size: 1.5rem; color: #054a47; font-weight: 600;">
-            <i class="fa-solid fa-chart-simple" style="color: #00605f;"></i> Marketing Stats
-          </div>
-          <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4);"></div>
-          <div style="font-family: 'Caveat', cursive; font-size: 2rem; color: #00605f;">experience & tools</div>
+      <!-- Marketing Stats Header -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem; flex-wrap: wrap;">
+        <div style="font-size: 1.5rem; color: #054a47; font-weight: 600;">
+          <i class="fa-solid fa-chart-simple" style="color: #00605f;"></i> Marketing Stats
         </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
-        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4); min-width: 50px;"></div>
+        <div style="font-family: 'Caveat', cursive; font-size: 2rem; color: #00605f;">experience & tools</div>
+      </div>
+      
+      <!-- Marketing Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #4ecdc4;">
           <div style="font-size: 2rem; color: #4ecdc4;">2</div>
           <div style="font-size: 0.9rem;">Campaigns</div>
         </div>
-        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #4ecdc4;">
           <div style="font-size: 2rem; color: #4ecdc4;">20+</div>
           <div style="font-size: 0.9rem;">Design Assets</div>
         </div>
-        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #4ecdc4;">
           <div style="font-size: 2rem; color: #4ecdc4;">3</div>
           <div style="font-size: 0.9rem;">Platforms</div>
         </div>
       </div>
+      
       <!-- tools of the trade -->
-    <div style="margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 50px;">
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
-        <i class="fa-solid fa-paintbrush" style="color: #4ecdc4; font-size: 1.8rem;"></i>
-        <span style="font-family: 'Caveat', cursive; font-size: 2rem; color: #054a47;">Poster Design Tools I Love</span>
-      </div>
-      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-        <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">🎨 Canva</span>
-        <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">📸 Figma</span>
-        <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">📈 Google Analytics</span>
-        <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">🖌️ Photoshop</span>
-      </div>
-      <p style="margin-top: 1rem; color: #00605f; font-style: italic;">always learning new ways to tell stories ✨</p>
-    </div>
-      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
-    ✦ Website designed with 🫧 by Lisa Liu ✦
+      <div style="margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 50px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <i class="fa-solid fa-paintbrush" style="color: #4ecdc4; font-size: 1.8rem;"></i>
+          <span style="font-family: 'Caveat', cursive; font-size: 2rem; color: #054a47;">Poster Design Tools I Love</span>
         </div>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">🎨 Canva</span>
+          <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">📸 Figma</span>
+          <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">📈 Google Analytics</span>
+          <span style="background: #f0f0f0; padding: 0.6rem 1.5rem; border-radius: 40px;">🖌️ Photoshop</span>
+        </div>
+        <p style="margin-top: 1rem; color: #00605f; font-style: italic;">always learning new ways to tell stories ✨</p>
+      </div>
+      
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
     </div>
   </div>
 </body>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +78,7 @@
     <div class="dot" style="top: 50%; right: 12%;"></div>
   </div>
 
-  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; flex-wrap: wrap;">
     
     <!-- LEFT SIDE COLUMN - NAVIGATION -->
     <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
@@ -136,9 +135,9 @@
 
     <!-- RIGHT SIDE - SKETCHBOOK CONTENT -->
     <div style="flex: 1;">
-      <div class="section-title"><i class="fa-solid fa-pencil"></i> SKETCHBOOK COLLECTION</div>
+      <div class="section-title" style="flex-wrap: wrap;"><i class="fa-solid fa-pencil"></i> SKETCHBOOK COLLECTION</div>
       
-      <!-- Filter Categories - Now just Digital and Traditional -->
+      <!-- Filter Categories -->
       <div style="display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap;">
         <span class="filter-badge active" onclick="filterSketches('all')">All Sketches</span>
         <span class="filter-badge" onclick="filterSketches('digital')">Digital</span>
@@ -199,9 +198,9 @@
 
       <!-- Fun Art Fact -->
       <div style="background: white; border-radius: 30px; padding: 1.5rem; margin: 2rem 0; border-left: 12px solid #ff6b6b;">
-        <div style="display: flex; align-items: center; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
           <span style="font-size: 2.5rem;">✏️</span>
-          <p style="color: #054a47; font-size: 1.1rem;">Every sketch here started as a tiny doodle in the corner of my notebook during class.</p>
+          <p style="color: #054a47; font-size: 1.1rem; margin: 0;">Every sketch here started as a tiny doodle in the corner of my notebook during class.</p>
         </div>
       </div>
       

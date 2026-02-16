@@ -22,7 +22,7 @@
     <div class="dot" style="top: 50%; right: 12%;"></div>
   </div>
 
-  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; flex-wrap: wrap;">
     
     <!-- LEFT SIDE COLUMN - NAVIGATION -->
     <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
@@ -79,19 +79,19 @@
 
     <!-- RIGHT SIDE - MUSIC CONTENT -->
     <div style="flex: 1;">
-      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px;">
+      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
         <i class="fa-solid fa-music" style="font-size: 2rem; color: #ff6b6b;"></i>
         <span>MY MUSIC WORLD</span>
       </div>
-      <!-- Featured Music Card  -->
-      <div class="music-card" onclick="window.open('https://suno.com/@elizaliuartist', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ff6b6b; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
+      <!-- Featured Music Card - FIXED -->
+      <div class="music-card" onclick="window.open('https://suno.com/@elizaliuartist', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ff6b6b; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
         <div style="flex: 0 0 150px; height: 150px; border-radius: 30px; overflow: hidden; background: #f8f8f8;">
           <img src="https://menlovc.com/wp-content/uploads/2025/11/suno_thumbnail.jpg" 
               alt="Suno AI Music" 
               style="width: 100%; height: 100%; object-fit: cover;"
               onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-headphones\' style=\'font-size: 4rem; color: white; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: linear-gradient(135deg, #ff6b6b, #ff9ff3);\'></i>';">
         </div>
-        <div style="flex: 1;">
+        <div style="flex: 1; min-width: 250px;">
           <h2 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.8rem;">AI-Assisted Compositions</h2>
           <p style="font-size: 1.1rem; color: #333;">10+ original pieces created with Suno + DAW. Signal processing, harmonics exploration, and reproducible refinement.</p>
           <div style="display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap;">
@@ -103,26 +103,28 @@
           <a href="https://suno.com/@elizaliuartist" target="_blank" style="color: #00605f; font-weight: 600; font-size: 1.1rem;">Listen to Compositions →</a>
         </div>
       </div>
+      
       <!-- Music Grid -->
       <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
-  <!-- My Playlists Card with Spotify Icon -->
-      <div class="music-card" style="background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #1DB954;">
-        <div style="height: 140px; background: linear-gradient(135deg, #1DB954, #191414); border-radius: 25px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
-          <i class="fa-brands fa-spotify"></i>
+        <!-- My Playlists Card with Spotify Icon -->
+        <div class="music-card" style="background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #1DB954;">
+          <div style="height: 140px; background: linear-gradient(135deg, #1DB954, #191414); border-radius: 25px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+            <i class="fa-brands fa-spotify"></i>
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">My Personal Playlists</h3>
+          <p style="color: #333;">Collections I've curated for studying, painting, coding, and traveling.</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">🎵 Study Vibes</span>
+            <span class="skill-tag">🎨 Art Hours</span>
+            <span class="skill-tag">💻 Deep Focus</span>
+            <span class="skill-tag">✈️ Wanderlust</span>
+          </div>
+          <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <span style="color: #666;"><i class="fa-regular fa-clock"></i> 5+ playlists</span>
+            <a href="https://open.spotify.com/user/31nh6rc3d7zg5kkhl367iloaoaau?si=HVxCUivvSqKV7rjRP6aoLg&nd=1&dlsi=8d7b16d3c20e4a5e" style="color: #1DB954; text-decoration: none; font-weight: 600;">Preview on Spotify →</a>
+          </div>
         </div>
-        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">My Personal Playlists</h3>
-        <p style="color: #333;">Collections I've curated for studying, painting, coding, and traveling.</p>
-        <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
-          <span class="skill-tag">🎵 Study Vibes</span>
-          <span class="skill-tag">🎨 Art Hours</span>
-          <span class="skill-tag">💻 Deep Focus</span>
-          <span class="skill-tag">✈️ Wanderlust</span>
-        </div>
-        <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center;">
-          <span style="color: #666;"><i class="fa-regular fa-clock"></i> 5+ playlists</span>
-          <a href="https://open.spotify.com/user/31nh6rc3d7zg5kkhl367iloaoaau?si=HVxCUivvSqKV7rjRP6aoLg&nd=1&dlsi=8d7b16d3c20e4a5e" style="color: #1DB954; text-decoration: none; font-weight: 600;">Preview on Spotify →</a>
-        </div>
-      </div>
+        
         <!-- Musical Journey Card -->
         <div class="music-card" style="background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #ff9ff3;">
           <div style="height: 140px; background: linear-gradient(135deg, #ff9ff3, #f368e0); border-radius: 25px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
@@ -139,18 +141,15 @@
         </div>
       </div>
 
-      <!-- Currently Listening - COLORED BUBBLES -->
+      <!-- Currently Listening -->
       <div style="background: white; border-radius: 30px; padding: 1.5rem; margin-top: 1rem;">
-        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap;">
           <i class="fa-solid fa-circle-play" style="color: #ff6b6b;"></i> 
           Currently Listening
         </h3>
         <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-          <!-- Red/Pink bubble (matches first card border: #ff6b6b) -->
           <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎬 Movie Soundtracks</span>
-          <!-- Green bubble (matches Spotify card border: #1DB954) -->
           <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎭 Musicals</span>
-          <!-- Pink bubble (matches piano card border: #ff9ff3) -->
           <span class="badge" style="background: #ff6b6b; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎻 Classical</span>
           <span class="badge" style="background: #ff6b6b; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎷 Jazz</span>
           <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎤 Hip-Hop</span>
@@ -158,9 +157,9 @@
         </div>
       </div>
 
-      <!-- Favorite Artists - COLORED BUBBLES -->
+      <!-- Favorite Artists -->
       <div style="background: white; border-radius: 30px; padding: 1.5rem; margin-top: 1rem;">
-        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap;">
           <i class="fa-solid fa-star" style="color: #ff6b6b;"></i> 
           Favorite Artists
         </h3>
@@ -187,10 +186,10 @@
           </div>
         </div>
       </div>
+      
       <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
-        
-    ✦ Website designed with 🫧 by Lisa Liu ✦
-        </div>
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
     </div>
   </div>
 </body>

@@ -22,7 +22,7 @@
     <div class="dot" style="top: 50%; right: 12%;"></div>
   </div>
 
-  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; flex-wrap: wrap;">
     
     <!-- LEFT SIDE COLUMN - NAVIGATION (SAME ON ALL PAGES) -->
     <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
@@ -81,15 +81,15 @@
     <div style="flex: 1;">
       <div class="section-title" style="margin-bottom: 2rem;"><i class="fas fa-flask"></i> RESEARCH & ENGINEERING</div>
       
-      <!-- Featured Research Card (Large) -->
-      <div class="research-card" onclick="window.open('https://urapprojects.berkeley.edu/detail.php?id=19807-1', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #007484; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
-         <img src="https://reentry.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_thumbnail/public/urap_logo.png?itok=k7bIlJT9&timestamp=1753300793"
-       alt="urap Logo"
-       style="width: 20%; height: 120px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;">
-        <div style="flex: 1;">
+      <!-- Featured Research Card -->
+      <div class="research-card" onclick="window.open('https://urapprojects.berkeley.edu/detail.php?id=19807-1', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #007484; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+        <img src="https://reentry.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_thumbnail/public/urap_logo.png?itok=k7bIlJT9&timestamp=1753300793"
+             alt="urap Logo"
+             style="width: 100%; max-width: 200px; height: auto; object-fit: contain; border-radius: 20px;">
+        <div style="flex: 1; min-width: 250px;">
           <h2 style="color: #054a47; margin-bottom: 0.5rem;">URAP @ Berkeley</h2>
           <p style="font-size: 1.1rem;"><strong>AI‑powered educational tools (Playlab)</strong> – define metrics, usability, pedagogical impact. Compare platforms.</p>
-          <div style="display: flex; gap: 0.8rem; margin: 1rem 0;">
+          <div style="display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap;">
             <span class="skill-tag">Google Sheets</span>
             <span class="skill-tag">Excel</span>
             <span class="skill-tag">Zotero</span>
@@ -102,11 +102,11 @@
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
         <!-- Human Judge Card -->
         <div class="research-card" onclick="window.open('https://humanjudge.com/ai-reviews', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #007484;">
-           <img src="https://media.licdn.com/dms/image/v2/D560BAQEVDPYXFJbu6Q/company-logo_200_200/B56Zsts2t8HAAI-/0/1765998292407/humanjudge_logo?e=2147483647&v=beta&t=VtPvLt0eQ4oAyeWJluzuf9U7jMt3Kyq9pFd0r-YcKbI"
-       alt="humanjudge Logo"
-       style="width: 42%; height: 180px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;margin-left: 1rem;margin-right: 1rem;">
-          <h3>Human Judge AI Empowerment</h3>"
-       <p>AI Evaluator: structured feedback for model improvement. Remote.</p>
+          <img src="https://media.licdn.com/dms/image/v2/D560BAQEVDPYXFJbu6Q/company-logo_200_200/B56Zsts2t8HAAI-/0/1765998292407/humanjudge_logo?e=2147483647&v=beta&t=VtPvLt0eQ4oAyeWJluzuf9U7jMt3Kyq9pFd0r-YcKbI"
+               alt="humanjudge Logo"
+               style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 20px; margin: 0 auto 1rem auto; display: block;">
+          <h3>Human Judge AI Empowerment</h3>
+          <p>AI Evaluator: structured feedback for model improvement. Remote.</p>
           <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
             <span class="skill-tag">Machine Learning</span>
             <span class="skill-tag">API</span>
@@ -117,8 +117,8 @@
         <!-- Publication Card -->
         <div class="research-card" onclick="window.open('https://www.researchgate.net/publication/377738785_Existing_Vibration_Control_Techniques_Applied_in_Construction_and_Mechanical_Engineering', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #007484;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ResearchGate_icon_SVG.svg/250px-ResearchGate_icon_SVG.svg.png"
-       alt="RG Logo"
-       style="width: 42%; height: 180px; object-fit: cover; border-radius: 20px; margin-bottom: 1rem;margin-left: 1rem;margin-right: 1rem;">
+               alt="RG Logo"
+               style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 20px; margin: 0 auto 1rem auto; display: block;">
           <h3>ICCE Publication 2023</h3>
           <p>“Existing Vibration Control Techniques …” Co‑authored with R. Shi, L. Lu.</p>
           <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
@@ -130,49 +130,51 @@
       </div>
 
       <!-- Research Stats Header -->
-    <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem;">
-      <div style="font-size: 1.5rem; color: #054a47; font-weight: 600;">
-        <i class="fa-solid fa-chart-simple" style="color: #00605f;"></i> Research Stats
-      </div>
-      <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4);"></div>
-      <div style="font-family: 'Caveat', cursive; font-size: 2rem; color: #00605f;">experience & tools</div>
-    </div>
-
-        <!-- Stats Grid --->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">First Gen</div>
-            <div style="font-size: 0.9rem;">Scholar</div>
-          </div>
-          
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">150+</div>
-            <div style="font-size: 0.9rem;">Research Hours</div>
-          </div>
-          
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">25+</div>
-            <div style="font-size: 0.9rem;">Collaborators</div>
-          </div>
-          
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">3+</div>
-            <div style="font-size: 0.9rem;">Years</div>
-          </div>
-          
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">5+</div>
-            <div style="font-size: 0.9rem;">Methods</div>
-          </div>
-          
-          <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
-            <div style="font-size: 2rem; color: #00605f;">100+</div>
-            <div style="font-size: 0.9rem;">Design Prototypes</div>
-          </div>
+      <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem; flex-wrap: wrap;">
+        <div style="font-size: 1.5rem; color: #054a47; font-weight: 600;">
+          <i class="fa-solid fa-chart-simple" style="color: #00605f;"></i> Research Stats
         </div>
-              <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
-            ✦ Website designed with 🫧 by Lisa Liu ✦
-            </div>
-          </div>
-        </body>
-      </html>
+        <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4); min-width: 50px;"></div>
+        <div style="font-family: 'Caveat', cursive; font-size: 2rem; color: #00605f;">experience & tools</div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">First Gen</div>
+          <div style="font-size: 0.9rem;">Scholar</div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">150+</div>
+          <div style="font-size: 0.9rem;">Research Hours</div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">25+</div>
+          <div style="font-size: 0.9rem;">Collaborators</div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">3+</div>
+          <div style="font-size: 0.9rem;">Years</div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">5+</div>
+          <div style="font-size: 0.9rem;">Methods</div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #007484;">
+          <div style="font-size: 2rem; color: #00605f;">100+</div>
+          <div style="font-size: 0.9rem;">Design Prototypes</div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
+    </div>
+  </div>
+</body>
+</html>

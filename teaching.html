@@ -23,7 +23,7 @@
     <div class="dot" style="top: 50%; right: 12%;"></div>
   </div>
 
-  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px; flex-wrap: wrap;">
     
     <!-- LEFT SIDE COLUMN - NAVIGATION -->
     <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
@@ -80,19 +80,19 @@
 
     <!-- RIGHT SIDE - TEACHING CONTENT -->
     <div style="flex: 1;">
-      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px;">
+      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
         <i class="fa-solid fa-chalkboard-user" style="font-size: 2rem; color: #ffb347;"></i> 
         <span>TEACHING & MENTORSHIP</span>
       </div>
       
       <!-- Featured Teaching Card -->
-      <div class="teaching-card" onclick="window.open('https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ffb347; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
+      <div class="teaching-card" onclick="window.open('https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ffb347; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
         <div style="flex: 0 0 150px; height: 150px; border-radius: 30px; overflow: hidden; background: #f8f8f8;">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOzC3O4rJxj29QlC8R46lIa5L7nKAYwfrXw&s" 
               alt="Calteach TA" 
               style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
         </div>
-        <div style="flex: 1;">
+        <div style="flex: 1; min-width: 250px;">
           <h2 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.8rem;">Calteach TA @ Berkeley</h2>
           <p style="font-size: 1.1rem; color: #333;">Learning Tools Development (Python) · +25% Completion Rate, Curriculum Design, Student Mentorship</p>
           <div style="display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap;">
@@ -124,36 +124,39 @@
           </div>
           <a href="https://drive.google.com/drive/folders/102O3EUV03pBWY_tYsfuB6lH0hc-tugm9" target="_blank" style="color: #00605f; font-weight: 600;">View Presentations →</a><br>
           <a href="https://vchsphysics.wixsite.com/vchsphysicsclub" target="_blank" style="color: #00605f; font-weight: 600;" onclick="event.stopPropagation();">View Website →</a>
-          </div>
+        </div>
+        
         <!-- Tutoring Card -->
         <div class="teaching-card" onclick="window.open('https://www.vcs.net/high-school/high-school-academics/student-support-services', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #ffb347;">
-  <div style="height: 140px; border-radius: 25px; margin-bottom: 1rem; overflow: hidden; background: #f8f8f8;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNhpFAZb0D-K4-whzh6WTPpO6G7VfLstIKg&s" 
-         alt="Peer Tutoring" 
-         style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
-  </div>
-      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Peer Tutoring</h3>
-      <p style="color: #333;">Math & Physics Tutor · 2+ years experience, Small Group & Individual Sessions</p>
-      <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
-        <span class="skill-tag">Calculus</span>
-        <span class="skill-tag">Physics</span>
-        <span class="skill-tag">Algebra</span>
-        <span class="skill-tag">Geometry</span>
-        <span class="skill-tag">Communication</span>
-        <span class="skill-tag">Evaluation</span>
+          <div style="height: 140px; border-radius: 25px; margin-bottom: 1rem; overflow: hidden; background: #f8f8f8;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNhpFAZb0D-K4-whzh6WTPpO6G7VfLstIKg&s" 
+                 alt="Peer Tutoring" 
+                 style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Peer Tutoring</h3>
+          <p style="color: #333;">Math & Physics Tutor · 2+ years experience, Small Group & Individual Sessions</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Calculus</span>
+            <span class="skill-tag">Physics</span>
+            <span class="skill-tag">Algebra</span>
+            <span class="skill-tag">Geometry</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Evaluation</span>
+          </div>
+          <a href="https://www.vcs.net/high-school/high-school-academics/student-support-services" target="_blank" style="color: #00605f; font-weight: 600;" onclick="event.stopPropagation();">Learn More →</a>
+        </div>
       </div>
-      <a href="https://www.vcs.net/high-school/high-school-academics/student-support-services" target="_blank" style="color: #00605f; font-weight: 600;" onclick="event.stopPropagation();">Learn More →</a>
-    </div>
-  </div>
 
-      <!-- Teaching Stats -->
-       <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem;">
+      <!-- Teaching Stats Header -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0 1rem; flex-wrap: wrap;">
         <div style="font-size: 1.5rem; color: #054a47; font-weight: 600;">
           <i class="fa-solid fa-chart-simple" style="color: #00605f;"></i> Teaching Stats
         </div>
-        <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #00605f, #4ecdc4); min-width: 50px;"></div>
         <div style="font-family: 'Caveat', cursive; font-size: 2rem; color: #00605f;">experience & tools</div>
       </div>
+      
+      <!-- Teaching Stats Grid -->
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;">
         <div class="stat-box">
           <div style="font-size: 2.5rem; color: #ffb347; font-weight: bold;">2+</div>
@@ -168,17 +171,19 @@
           <div style="font-size: 1rem; color: #054a47;">Completion Rate ↑</div>
         </div>
       </div>
+      
       <!-- Teaching Reflection Corner -->
-<div style="margin: 2.5rem 0 1.5rem 0; padding: 2rem; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-radius: 40px; border: 2px dashed #ffb347;">
-  <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 1rem;">
-    <i class="fa-regular fa-message" style="font-size: 2rem; color: #ffb347;"></i>
-    <h3 style="font-family: 'Caveat', cursive; font-size: 2rem; color: #054a47; margin: 0;">a little reflection</h3>
-  </div>
-  <p style="font-size: 1.2rem; line-height: 1.6; color: #054a47; margin-left: 50px;">
-    "For me, teaching isn't just explaining concepts—it's building bridges. I want every student to feel seen and capable. I live for that 'aha!' moment when confusion turns into wonder. I know—a good teacher can change a student's entire life. So that's who I want to be.I want to bring science to their lives—not as something distant, but as something beautiful. Something theirs."
-  </p>
-  <p style="font-family: 'Caveat', cursive; font-size: 1.5rem; color: #00605f; text-align: right; margin-right: 20px;">— Lisa</p>
-</div>
+      <div style="margin: 2.5rem 0 1.5rem 0; padding: 2rem; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-radius: 40px; border: 2px dashed #ffb347;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 1rem; flex-wrap: wrap;">
+          <i class="fa-regular fa-message" style="font-size: 2rem; color: #ffb347;"></i>
+          <h3 style="font-family: 'Caveat', cursive; font-size: 2rem; color: #054a47; margin: 0;">a little reflection</h3>
+        </div>
+        <p style="font-size: 1.2rem; line-height: 1.6; color: #054a47; margin-left: 50px;">
+          "For me, teaching isn't just explaining concepts—it's building bridges. I want every student to feel seen and capable. I live for that 'aha!' moment when confusion turns into wonder. I know—a good teacher can change a student's entire life. So that's who I want to be. I want to bring science to their lives—not as something distant, but as something beautiful. Something theirs."
+        </p>
+        <p style="font-family: 'Caveat', cursive; font-size: 1.5rem; color: #00605f; text-align: right; margin-right: 20px;">— Lisa</p>
+      </div>
+      
       <!-- Website Footer -->
       <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
         ✦ Website designed with 🫧 by Lisa Liu ✦
