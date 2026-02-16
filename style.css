@@ -280,7 +280,7 @@ body::after {
   margin: 2rem 0 2.2rem;
   border: 1px solid rgba(0, 134, 116, 0.8);
   box-shadow: 0 5px 20px -10px rgba(70, 90, 80, 0.1);
-  border-left: 10px solid #466963;
+  border-left: 10px solid #046958;
   animation: pulse 4s ease-in-out infinite;
 }
 

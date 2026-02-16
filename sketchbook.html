@@ -221,15 +221,14 @@
       <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3);">
         ✦ Website designed with 🫧 by Lisa Liu ✦
       </div>
-    </div> <!-- Close right side content -->
-  </div> <!-- Close main card -->
+    </div> 
+  </div> 
 
   <script>
     function filterSketches(category) {
       const sketches = document.querySelectorAll('.sketch-item');
       const filters = document.querySelectorAll('.filter-badge');
       
-      // Update active filter
       filters.forEach(filter => {
         filter.classList.remove('active');
         if (filter.textContent.toLowerCase().includes(category) || 
@@ -238,7 +237,6 @@
         }
       });
       
-      // Filter sketches
       sketches.forEach(sketch => {
         if (category === 'all' || sketch.dataset.category === category) {
           sketch.style.display = 'block';
