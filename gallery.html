@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Liu · photo gallery ✦ personal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-link { padding: 0.8rem 1rem; border-radius: 30px; background: white; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #054a47; transition: all 0.3s; }
+    .nav-link:hover { background: #2df8ff; transform: translateX(5px); }
+    .section-header { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 2px solid; padding-bottom: 0.5rem; }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .photo-item {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-left: 8px solid #4ecdc4;
+    }
+    .photo-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.9);
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .photo-item:hover .photo-caption {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-dots">
+    <div class="dot" style="top: 8%; left: 10%;"></div>
+    <div class="dot" style="top: 50%; right: 12%;"></div>
+  </div>
+
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+    
+    <!-- LEFT SIDE COLUMN - NAVIGATION -->
+    <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 100px; height: 100px; border-radius: 40% 60% 65% 35%; background: linear-gradient(145deg, #008a78, #55fff9); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✦</div>
+        <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #054a47; margin: 0;">Lisa Liu</h3>
+        <div style="font-size: 0.9rem; color: #00605f; background: rgba(255,255,255,0.5); padding: 0.3rem; border-radius: 20px; margin-top: 0.3rem;">UC Berkeley '29</div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #00605f; border-bottom-color: #00605f;">
+          <i class="fa-solid fa-briefcase"></i> Professional
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="research.html" class="nav-link"><i class="fa-solid fa-microscope"></i> Research</a>
+          <a href="projects.html" class="nav-link"><i class="fa-solid fa-flask"></i> Projects</a>
+          <a href="art.html" class="nav-link"><i class="fa-solid fa-paintbrush"></i> Art</a>
+          <a href="marketing.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Marketing</a>
+          <a href="teaching.html" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+          <a href="skills.html" class="nav-link"><i class="fa-solid fa-wrench"></i> Skills</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #ff6b6b; border-bottom-color: #ff6b6b;">
+          <i class="fa-regular fa-heart"></i> Personal
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="music.html" class="nav-link"><i class="fa-solid fa-music"></i> Music</a>
+          <a href="gallery.html" class="nav-link" style="background: #2df8ff;"><i class="fa-regular fa-images"></i> Gallery</a>
+          <a href="journal.html" class="nav-link"><i class="fa-regular fa-pen-to-square"></i> Journal</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-header" style="color: #4ecdc4; border-bottom-color: #4ecdc4;">
+          <i class="fa-solid fa-link"></i> Connect
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="https://linkedin.com/in/qingyangliu36" class="nav-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/lisaliu060306-art" class="nav-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/lisaliu0306/" class="nav-link" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="mailto:lisaliu20060306@berkeley.edu" class="nav-link"><i class="fa-regular fa-envelope"></i> Email</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="display: inline-block; padding: 0.6rem 1.5rem; background: #2df8ff; color: #054a47; border-radius: 40px; text-decoration: none; font-weight: 600;">
+          <i class="fa-regular fa-face-smile"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - GALLERY CONTENT -->
+    <div style="flex: 1;">
+      <div class="section-title"><i class="fa-regular fa-images"></i> TRAVEL PHOTO GALLERY</div>
+      
+      <!-- Gallery Categories - UPDATED with US, China, Other -->
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+        <span class="badge" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 20px;" onclick="filterGallery('all')">All</span>
+        <span class="badge" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 20px;" onclick="filterGallery('us')">🇺🇸 USA</span>
+        <span class="badge" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 20px;" onclick="filterGallery('china')">🇨🇳 China</span>
+        <span class="badge" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 20px;" onclick="filterGallery('other')">🌍 Other</span>
+      </div>
+
+      <!-- Photo Grid - ALL photos with updated categories -->
+      <div class="photo-grid" id="photoGallery">
+        <!-- Photo 1 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1uAMqDY7SWjtMTek_DTUs8l6l3YBtmDS9&sz=w1000"
+               alt="Berkeley, US · Jan 2026">
+          <div class="photo-caption">Berkeley, US · Jan 2026</div>
+        </div>
+        
+        <!-- Photo 2 - China -->
+        <div class="photo-item" data-category="china">
+          <img src="https://drive.google.com/thumbnail?id=1XfMPLtEZrO2pHtL8mO--LwBnFNXvXmNy&sz=w1000" 
+               alt="Hohhot, China · July 2025">
+          <div class="photo-caption">Hohhot, China · July 2025</div>
+        </div>
+        
+        <!-- Photo 3 - China -->
+        <div class="photo-item" data-category="china">
+          <img src="https://drive.google.com/thumbnail?id=1IU0jQrpNb-GAwyeEuT_w4hseig4hLiQf&sz=w1000" 
+               alt="Datong, China · June 2025">
+          <div class="photo-caption">Datong, China · June 2025</div>
+        </div>
+        
+        <!-- Photo 4 - China -->
+        <div class="photo-item" data-category="china">
+          <img src="https://drive.google.com/thumbnail?id=1J5I1bUtC0y1zVVDD86yNT2wgIv5fqSsE&sz=w1000" 
+               alt="Taiyuan, China · June 2025">
+          <div class="photo-caption">Taiyuan, China · June 2025</div>
+        </div>
+        
+        <!-- Photo 5 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1LzmbTfLLBY-fu54zrFV60UMdedzl9Vy0&sz=w1000" 
+               alt="Anaheim, US · March 2025">
+          <div class="photo-caption">Anaheim, US · March 2025</div>
+        </div>
+        
+        <!-- Photo 6 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1J8smQAmoujFTRgRLQIBjNaubxy8XBvXl&sz=w1000" 
+               alt="San Diego, US · July 2024">
+          <div class="photo-caption">San Diego, US · July 2024</div>
+        </div>
+
+        <!-- Photo 7 - China -->
+        <div class="photo-item" data-category="china">
+          <img src="https://drive.google.com/thumbnail?id=1oNBEhe1052xiI-FhM2Q7Ntkt5uJyOYnL&sz=w1000" 
+               alt="Jinci, China · July 2024">
+          <div class="photo-caption">Jinci, China · July 2024</div>
+        </div>
+        
+        <!-- Photo 8 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1pSHFbazBVxIDopNyUdAUG1AOBPc8GMGC&sz=w1000"
+               alt="Las Vegas, US · Jan 2024">
+          <div class="photo-caption">Las Vegas, US · Jan 2024</div>
+        </div>
+        
+        <!-- Photo 9 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1pTQXXiTgeDWHH3H8EnylBELteaG7w3-_&sz=w1000"
+               alt="Saint Helena, US · Dec 2023">
+          <div class="photo-caption">Saint Helena, US · Dec 2023</div>
+        </div>
+        
+        <!-- Photo 10 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1UwDp1zqgHe1cZBhmEdl5u97rsk9ktCM0&sz=w1000"
+               alt="San Francisco, US · Dec 2023">
+          <div class="photo-caption">San Francisco, US · Dec 2023</div>
+        </div>
+        
+        <!-- Photo 11 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=17NORQrbkUbZx_yZbL-y0Dum38tV0Y5aF&sz=w1000"
+               alt="Oakville, US · Dec 2023">
+          <div class="photo-caption">Oakville, US · Dec 2023</div>
+        </div>
+        
+        <!-- Photo 12 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1bEV_ZStvPDdtHMDnHv_sMqafMO-qQKP7&sz=w1000"
+               alt="San Jose, US · Nov 2023">
+          <div class="photo-caption">San Jose, US · Nov 2023</div>
+        </div>
+        
+        <!-- Photo 13 - US -->
+        <div class="photo-item" data-category="us">
+          <img src="https://drive.google.com/thumbnail?id=1ckpqhFphQNYhjY5x5Yaj3KwYydecOnsL&sz=w1000"
+               alt="Santa Clara, US · Sept 2022">
+          <div class="photo-caption">Santa Clara, US · Sept 2022</div>
+        </div>
+        
+        <!-- Photo 14 - China -->
+        <div class="photo-item" data-category="china">
+          <img src="https://drive.google.com/thumbnail?id=1W_3C7ESG5EbmAheJm6i66qCRKEB1a6wE&sz=w1000"
+               alt="Sanya, Hainan · July 2022">
+          <div class="photo-caption">Sanya, Hainan · July 2022</div>
+        </div>
+        
+        <!-- Photo 15 - Other (Thailand) -->
+        <div class="photo-item" data-category="other">
+          <img src="https://drive.google.com/thumbnail?id=11D86DRPJYyf-tIWDZYsCDluW694Z1PDk&sz=w1000"
+               alt="Chiang Mai, Thailand · July 2018">
+          <div class="photo-caption">Chiang Mai, Thailand · July 2018</div>
+        </div>
+        
+        <!-- Photo 16 - Other (Turkey) -->
+        <div class="photo-item" data-category="other">
+          <img src="https://drive.google.com/thumbnail?id=1OQOoLJinwstY8sxeLQn4L1zfA0whSFAE&sz=w1000"
+               alt="Istanbul, Turkey · July 2015">
+          <div class="photo-caption">Istanbul, Turkey · July 2015</div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterGallery(category) {
+      const photos = document.querySelectorAll('.photo-item');
+      photos.forEach(photo => {
+        if (category === 'all' || photo.dataset.category === category) {
+          photo.style.display = 'block';
+        } else {
+          photo.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

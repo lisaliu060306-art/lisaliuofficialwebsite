@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Liu · projects ✦ portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-link { padding: 0.8rem 1rem; border-radius: 30px; background: white; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #054a47; transition: all 0.3s; }
+    .nav-link:hover { background: #2df8ff; transform: translateX(5px); }
+    .section-header { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 2px solid; padding-bottom: 0.5rem; }
+    .project-card { animation: float 6s ease-in-out infinite; transition: all 0.3s ease; }
+    .project-card:hover { animation: none; transform: translateY(-10px) scale(1.02); }
+    .card-image { width: 100%; height: 140px; background: linear-gradient(135deg, #006853, #2df8ff); border-radius: 20px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; }
+  </style>
+</head>
+<body>
+  <div class="floating-dots">
+    <div class="dot" style="top: 8%; left: 10%;"></div>
+    <div class="dot" style="top: 50%; right: 12%;"></div>
+  </div>
+
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+    
+    <!-- LEFT SIDE COLUMN - NAVIGATION (SAME ON ALL PAGES) -->
+    <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 100px; height: 100px; border-radius: 40% 60% 65% 35%; background: linear-gradient(145deg, #008a78, #55fff9); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✦</div>
+        <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #054a47; margin: 0;">Lisa Liu</h3>
+        <div style="font-size: 0.9rem; color: #00605f; background: rgba(255,255,255,0.5); padding: 0.3rem; border-radius: 20px; margin-top: 0.3rem;">UC Berkeley '29</div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #00605f; border-bottom-color: #00605f;">
+          <i class="fa-solid fa-briefcase"></i> Professional
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="research.html" class="nav-link"><i class="fa-solid fa-microscope"></i> Research</a>
+          <a href="projects.html" class="nav-link" style="background: #2df8ff;"><i class="fa-solid fa-flask"></i> Projects</a>
+          <a href="art.html" class="nav-link"><i class="fa-solid fa-paintbrush"></i> Art</a>
+          <a href="marketing.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Marketing</a>
+          <a href="teaching.html" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+          <a href="skills.html" class="nav-link"><i class="fa-solid fa-wrench"></i> Skills</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #ff6b6b; border-bottom-color: #ff6b6b;">
+          <i class="fa-regular fa-heart"></i> Personal
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="music.html" class="nav-link"><i class="fa-solid fa-music"></i> Music</a>
+          <a href="gallery.html" class="nav-link"><i class="fa-regular fa-images"></i> Gallery</a>
+          <a href="journal.html" class="nav-link"><i class="fa-regular fa-pen-to-square"></i> Journal</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-header" style="color: #4ecdc4; border-bottom-color: #4ecdc4;">
+          <i class="fa-solid fa-link"></i> Connect
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="https://linkedin.com/in/qingyangliu36" class="nav-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/lisaliu060306-art" class="nav-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/lisaliu0306/" class="nav-link" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="mailto:lisaliu20060306@berkeley.edu" class="nav-link"><i class="fa-regular fa-envelope"></i> Email</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="display: inline-block; padding: 0.6rem 1.5rem; background: #2df8ff; color: #054a47; border-radius: 40px; text-decoration: none; font-weight: 600;">
+          <i class="fa-regular fa-face-smile"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - PROJECTS CONTENT -->
+    <div style="flex: 1;">
+      <div class="section-title" style="margin-bottom: 2rem;"><i class="fa-regular fa-star"></i> TECHNICAL PROJECTS</div>
+      
+      <!-- Featured Project -->
+      <div class="project-card" onclick="window.open('https://github.com/lisaliu060306-art/webserver', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #006853; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
+        <div style="flex: 0 0 180px; height: 140px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+          <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/lularobs/php6RFk0y.png"
+              alt="Chessboard graphic"
+              style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="flex: 1;">
+          <h2 style="color: #054a47; margin-bottom: 0.5rem;">Full‑Stack Chess Web Server</h2>
+          <p style="font-size: 1.1rem;">Python, JavaScript, CSS, HTML · Browser UI, Move Validation, Real-Time Play with Undo, Highlights, and Reset.</p>
+          <div style="display: flex; gap: 0.8rem; margin: 1rem 0;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+          <a href="https://github.com/lisaliu060306-art/webserver" target="_blank" style="color: #00605f; font-weight: 600;">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Project Grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+        <!-- Wind Turbine -->
+        <div class="project-card" onclick="window.open('https://drive.google.com/drive/folders/1-IGItxh8npIyaLLZKPBSp_hykcVDVfnz', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #006853;">
+          <div style="height: 120px; border-radius: 20px; margin-bottom: 1rem; overflow: hidden;">
+            <img src="https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2015/07/csmslogo.jpg?fit=1016%2C538&ssl=1&w=640" 
+                alt="COSMOS Logo" 
+                style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3>Wind Turbine Blade (COSMOS)</h3>
+          <p>CAD, Aerodynamic Sim, 20+ Prototypes · 2nd place & Best Presentation.</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">CAD</span>
+            <span class="skill-tag">Simulation</span>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1-IGItxh8npIyaLLZKPBSp_hykcVDVfnz" target="_blank" style="color: #00605f;">View Project →</a>
+        </div>
+
+        <!-- Vibration Analysis -->
+        <div class="project-card" onclick="window.open('https://docs.google.com/presentation/d/1KB7geH_uKAR0FVtk-LwEFnRPT3jv3pTq/edit', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #006853;">
+          <div style="height: 120px; border-radius: 20px; margin-bottom: 1rem; overflow: hidden; background: #f8f8f8; display: flex; align-items: center; justify-content: center;">
+            <img src="https://samueli.ucla.edu/wp-content/uploads/samueli/UCLA_Samueli_MAE_block-1.png"
+                alt="UCLA Samueli Mechanical & Aerospace Engineering"
+                style="width: 100%; height: 100%; object-fit: contain; padding: 10px;">
+          </div>
+          <h3>Structural Vibration Analysis</h3>
+          <p>Simulated Vibration, 3D Models, Python-Assisted Heatmaps (UCLA)</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">3D Modeling</span>
+          </div>
+          <a href="https://docs.google.com/presentation/d/1KB7geH_uKAR0FVtk-LwEFnRPT3jv3pTq/edit" target="_blank" style="color: #00605f;">View Presentation →</a>
+        </div>
+      </div> <!-- Close project grid -->
+
+      <!-- Project Stats -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #006853;">
+          <div style="font-size: 2rem; color: #00605f;">4+</div>
+          <div style="font-size: 0.9rem;">Projects Completed</div>
+        </div>
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #006853;">
+          <div style="font-size: 2rem; color: #00605f;">2</div>
+          <div style="font-size: 0.9rem;">Awards</div>
+        </div>
+        <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #006853;">
+          <div style="font-size: 2rem; color: #00605f;">3</div>
+          <div style="font-size: 0.9rem;">Technologies</div>
+        </div>
+      </div>
+
+      <!-- Website Quote - Now properly placed outside the stats grid -->
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
+    </div> <!-- Close right side content -->
+  </div> <!-- Close main card -->
+</body>
+</html>

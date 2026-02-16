@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Liu · applied physics + art ✦ portfolio</title>
+  <!-- Google Fonts: artistic & technical fusion -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* ---------- global art-science fusion ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: radial-gradient(circle at 10% 30%, #8dffe1 0%, #55fff9);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      color: #054a47;
+      min-height: 100vh;
+      padding: 2rem;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* artistic animated background — hand-drawn feel */
+    body::before {
+      content: "✎✧⚛️🎨📐🎭";
+      position: absolute;
+      top: 3%;
+      left: 2%;
+      font-size: 7rem;
+      opacity: 0.05;
+      white-space: pre;
+      transform: rotate(-5deg);
+      font-family: 'Caveat', cursive;
+      animation: drift 36s infinite linear;
+      letter-spacing: 20px;
+    }
+
+    body::after {
+      content: "∮∫∇∑∞∝∩∪";
+      position: absolute;
+      bottom: 5%;
+      right: 3%;
+      font-size: 6rem;
+      opacity: 0.04;
+      font-weight: 300;
+      transform: rotate(8deg);
+      animation: drift 42s infinite reverse;
+    }
+
+    @keyframes drift {
+      0% { transform: translateX(0px) rotate(-5deg); }
+      50% { transform: translateX(40px) rotate(3deg); }
+      100% { transform: translateX(0px) rotate(-5deg); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(4deg); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* SIMPLE FUN ANIMATIONS */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+  }
+
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes rainbow {
+    0% { color: #ff6b6b; }
+    25% { color: #4ecdc4; }
+    50% { color: #ffe66d; }
+    75% { color: #ff9ff3; }
+    100% { color: #ff6b6b; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+
+    /* ------ main card – softer, artistic glassmorphism ------ */
+    .card {
+      background: rgb(203, 255, 250);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 56px 56px 56px 56px;
+      padding: 2.8rem 3rem;
+      max-width: 1300px;
+      width: 100%;
+      box-shadow: 0 30px 50px -25px rgba(10, 80, 70, 0.25),
+                  inset 0 0 0 1.5px rgba(71, 255, 240, 0.854);
+      border: 1px solid rgba(213, 255, 247, 0.5);
+      position: relative;
+      animation: fadeSlide 1.1s ease;
+    }
+
+    /* multicolor art deco top bar */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #1f7a74, #197e78, #ffffff, #1f7a74, #2df8ff);
+      background-size: 300% 100%;
+      animation: shimmer 10s infinite;
+      border-radius: 56px 56px 0 0;
+    }
+
+    /* floating ink dots – artistic yet scientific */
+    .floating-dots {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #2d8480;
+      border-radius: 70% 30% 60% 40% / 50% 60% 40% 50%;
+      opacity: 0.12;
+      animation: float 14s infinite;
+    }
+
+    /* ------ table of contents (art + stem grid) ------ */
+    .toc-wrapper {
+      background: rgb(255, 255, 255);
+      border-radius: 100px;
+      padding: 0.8rem 1.8rem;
+      margin-bottom: 2.5rem;
+      backdrop-filter: blur(6px);
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      border: 1px dashed #3f9892;
+
+    
+    }
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      color: #00b4ab;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: #054a47;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .toc-item i {
+      color: #00a9a4  /* warm artistic accent */
+      font-size 1.1rem;
+    }
+    .toc-item:hover {
+      border-bottom-color: #1f7a74;
+      transform: translateY(-2px);
+    }
+
+    /* ------ profile: Lisa Liu – artist & engineer ------ */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .profile-image-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+      overflow: hidden;
+      box-shadow: 0 20px 25px -10px rgba(30, 100, 90, 0.3);
+      animation: morph 10s ease-in-out infinite;
+      background: linear-gradient(145deg, #008a78, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 5s ease-in-out infinite, morph 10s ease-in-out infinite !important;
+    }
+    @keyframes morph {
+      0%,100% { border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%; }
+      25% { border-radius: 55% 45% 40% 60% / 55% 50% 50% 45%; }
+      50% { border-radius: 30% 70% 50% 50% / 30% 60% 40% 70%; }
+      75% { border-radius: 65% 35% 45% 55% / 55% 30% 70% 45%; }
+    }
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .profile-image-container:hover .profile-image {
+      transform: scale(1.1) rotate(3deg);
+    }
+    .name {
+      font-size: 7rem !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      font-family: 'Brush Script MT', cursive !important;
+      background: linear-gradient(132deg, #3db8b2, #178287, #054a47, #004945, #46ebeb);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.25rem;
+      animation: bounce 3s ease-in-out infinite !important;
+    }
+    name {
+    font-size: 15rem !important;
+    font-weight: 900 !important; /* Maximum bold */
+    font-family: 'Brush Script MT', cursive !important;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    background: linear-gradient(132deg, #004945, #12817f, #b4fefe);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 0 rgb(255, 255, 255); /* Extra bold effect */
+    margin-bottom: 0.25rem;
+}
+    .badge-container {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: linear-gradient(145deg, rgb(255, 255, 255), rgb(255, 255, 255));
+      backdrop-filter: blur(3px);
+      padding: 0.4rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #054a47;
+      border: 1px solid rgba(70, 120, 110, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .badge i {
+      color: #00a9a4; /* artistic clay */
+    }
+    .badge:hover {
+  animation: wiggle 0.5s ease;
+  background: #0ae7ff !important;
+  color: white;
+  }
+
+    /* --- about / bio – tailored exactly to resume --- */
+    .bio-card {
+      background: rgb(255, 255, 255);
+      backdrop-filter: blur(4px);
+      padding: 2rem 2.2rem;
+      border-radius: 40px;
+      margin: 2rem 0 2.2rem;
+      border: 1px solid rgba(0, 134, 116, 0.8);
+      box-shadow: 0 5px 20px -10px rgba(70, 90, 80, 0.1);
+      border-left: 10px solid #046958;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .highlight-text {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #1e615c;
+    }
+    .signature {
+      font-family: 'Caveat', cursive;
+      font-size: 1.6rem;
+      color: #03c4bd;
+      margin-top: 0.6rem;
+
+    }
+
+    /* ------- multi‑page simulation (anchor links, sections) ------ */
+    .page-section {
+      scroll-margin-top: 2rem;
+    }
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #054a47;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 3px dashed #00382d;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.8rem;
+    
+    }
+    .section-title i {
+      background: #004945;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2rem;
+    }
+  
+
+    /* ---- education grid – from resume + artistic ---- */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.5rem;
+      border-left: 8px #004945;
+      margin-bottom: 2.8rem;
+    }
+    .edu-item {
+      background: rgb(255, 255, 255);
+      padding: 1.5rem 1.2rem;
+      border-radius: 28px;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(0, 94, 89, 0.9);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 10px 15px -12px rgba(60, 80, 70, 0.1);
+    }
+    .edu-item:hover {
+      background: white;
+      transform: scale(1.02) translateY(-6px);
+      border-color: #3d9079;
+    }
+    .edu-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      color: #00605f;
+    }
+
+    /* ---------- PROJECTS: exactly from resume + creative twist ---------- */
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .project-card {
+      background: white;
+      border-radius: 30px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 8px 20px -12px rgba(50, 80, 70, 0.16);
+      transition: all 0.25s ease;
+      border-left: 8px solid #006853;
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .project-card::after {
+      content: "⚛️✎";
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      font-size: 1.8rem;
+      opacity: 0.1;
+    }
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 30px 30px -20px rgba(34, 110, 100, 0.2);
+      border-color: #ffffff;
+    }
+    .project-icon {
+      font-size: 2.3rem;
+      color: #004945;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+    .tag {
+      background:#2df8ff;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #3d5e5a;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .tag:hover {
+      animation: shake 0.3s ease;
+      background: #9bffe9;
+      color: white;
+    }
+
+    /* ---------- SKILLS : technical + artistic (expanded from resume) ---------- */
+      /* Updated Skills Section Styling - Match research card hover */
+.skill-ecosystem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  background: rgb(255, 255, 255);
+  padding: 1.8rem;
+  border-radius: 50px 20px 50px 20px;
+  margin: 2rem 0;
+}
+
+.skill-cluster {
+  flex: 1 1 200px;
+}
+
+.cluster-title {
+  font-weight: 600;
+  color: #2c5f5a;
+  border-bottom: 2px solid #00604e;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  
+}
+
+
+.skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.skill {
+  background: #2df8ff;
+  padding: 0.45rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  color: #1c534f;
+  border: 1px solid rgba(98, 128, 120, 0.2);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+  cursor: default;
+  /* ADD THESE LINES for floating animation */
+  animation: gentleFloat 8s ease-in-out infinite;
+  display: inline-block; /* Ensures transform works properly */
+  will-change: transform; /* Performance optimization */
+}
+
+/* Different animation speeds for variety - add this after your .skill class */
+.skill:nth-child(odd) {
+  animation: floatAround 10s ease-in-out infinite;
+}
+
+.skill:nth-child(3n) {
+  animation-duration: 12s;
+  animation-delay: -2s;
+}
+
+.skill:nth-child(5n+2) {
+  animation-duration: 7s;
+  animation-delay: -1s;
+}
+/* Hover effect - matches research card style (#2df8ff background) */
+.skill:hover {
+  transform: scale(1.1); /* This will work WITH your floating animation */
+  margin: 0 5px; /* ADD THIS LINE */
+  z-index: 10; /* ADD THIS LINE so scaled skills appear above others */
+}
+
+.skill:hover i {
+  color: #000000 !important; /* Icon turns black on hover */
+}
+
+.skill i {
+  margin-right: 6px;
+  color: #00666a;
+  transition: color 0.3s ease;
+}
+/* Add this CSS for bounce effect */
+.skill {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    /* ----- LINKS (github, linkedin, design, suno, etc) actual from resume ---- */
+    .links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+    .link-tile {
+      background: white;
+      padding: 0.9rem 2rem;
+      border-radius: 80px;
+      text-decoration: none;
+      color: #054a47;
+      font-weight: 550;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 14px rgba(70, 110, 100, 0.06);
+      border: 1px solid rgba(255, 255, 240, 0.9);
+      transition: all 0.35s;
+    }
+    .link-tile:hover {
+      background: #1f7a74;
+      color: white;
+      transform: translateY(-5px) scale(1.04);
+      border-color: #1f7a74;
+    }
+    .link-tile:hover i {
+      color: white;
+    }
+    /* Add this to your <style> section */
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.marketing-card {
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 1.7rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border-left: 8px solid #007484;
+  box-shadow: 0 8px 20px -12px rgba(50, 80, 70, 0.16);
+}
+
+.marketing-card:hover {
+  background: #2df8ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+.marketing-card:hover h4,
+.marketing-card:hover p,
+.marketing-card:hover .marketing-tag {
+  color: #000;
+}
+
+.marketing-card:hover .marketing-tag {
+  background: white !important;
+} 
+
+.marketing-icon {
+  font-size: 2rem;
+  color: #004945;
+  margin-bottom: 0.8rem;
+}
+
+.marketing-tag {
+  background: #2df8ff;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.learn-more-link {
+  margin-top: 1rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.learn-more-link a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.marketing-card:hover .learn-more-link {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+    /* ---- social & artistic contact ---- */
+    .social-links {
+      margin-top: 2rem;
+      padding-top: 1.8rem;
+      border-top: 2px dotted #b3aba1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+    }
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.6rem 1.5rem;
+      border-radius: 60px;
+      background: rgba(255, 240, 230, 0.4);
+      border: 1px solid rgba(150, 140, 130, 0.2);
+      color: #1f5e5a;
+      transition: 0.25s;
+    }
+    .social-item:hover {
+      background: #fff3e6;
+      border-color: #25ffed;
+      transform: translateY(-3px);
+    }
+
+    /* ---- publication badge ---- */
+    .publication-badge {
+      background: #004945;
+      border-radius: 18px;
+      padding: 1.2rem 1.8rem;
+      margin: 1.8rem 0;
+      border-left: 8px solid #006853;
+      font-style: italic;
+    }
+
+    /* --- table of contents / page anchors: multiple pages simulation --- */
+    .page-indicator {
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .page-pill {
+      background: rgba(0, 255, 221, 0.4);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      border: 1px solid #90b0aa;
+      color: #075a54;
+    }
+        /* ===== SKILL JAR STYLES - ADD THIS ENTIRE SECTION HERE ===== */
+    .skill-jar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 0 2rem 0;
+      margin: 0 auto !important;
+      width: 100%;
+  
+    }
+
+    .skill-jar {
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 4px dashed #00a9a4;
+      border-radius: 40% 40% 30% 30%;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 169, 164, 0.2);
+      backdrop-filter: blur(5px);
+      margin: 0 auto !important;
+    }
+
+    .skill-jar:hover {
+      transform: scale(1.02);
+      border-color: #ffd700;
+      box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+    }
+
+    .jar-liquid {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(135deg, #00a9a4, #55fff9);
+      transition: height 0.5s ease;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .jar-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 1rem;
+      overflow-y: auto;
+      z-index: 2;
+    }
+
+    .jar-placeholder {
+      color: #00a9a4;
+      font-style: italic;
+      opacity: 0.7;
+      text-align: center;
+      width: 100%;
+      margin-top: 40%;
+    }
+
+    .jar-shine {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), transparent 70%);
+      animation: shine 4s infinite;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    @keyframes shine {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+      25% { transform: translate(5%, 5%) rotate(5deg); opacity: 0.5; }
+      50% { transform: translate(-5%, -5%) rotate(-5deg); opacity: 0.3; }
+    }
+
+    .jar-stats {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #054a47;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .reset-jar-btn {
+      background: white;
+      border: 2px solid #00a9a4;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #054a47;
+    }
+    .cluster-title:last-of-type {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .reset-jar-btn:hover {
+      background: #00a9a4;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .collected-skill {
+      background: #2df8ff !important;
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #000;
+      border: 1px solid white;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    /* ===== END SKILL JAR STYLES ===== */
+
+    @media (max-width: 750px) {
+      body { padding: 1rem; }
+      .card { padding: 2rem; }
+      .name { font-size: 3rem; }
+    }
+    /* ===== ALL CARDS FLOAT LIKE PROJECTS ===== */
+.project-card,
+.research-card,
+.art-card,
+.marketing-card,
+.bio-card,
+.skill-ecosystem,
+.link-tile,
+.social-item,
+.badge,
+.skill-jar,
+.profile-image-container {
+  animation: float 7s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Different timing for visual interest */
+.project-card:nth-child(1) { animation-delay: 0s; }
+.project-card:nth-child(2) { animation-delay: -1s; }
+.project-card:nth-child(3) { animation-delay: -2s; }
+.project-card:nth-child(4) { animation-delay: -3s; }
+.research-card:nth-child(1) { animation-delay: -0.3s; }
+.research-card:nth-child(2) { animation-delay: -1.3s; }
+.art-card:nth-child(1) { animation-delay: -0.9s; }
+.art-card:nth-child(2) { animation-delay: -1.9s; }
+.marketing-card:nth-child(1) { animation-delay: -0.4s; }
+.marketing-card:nth-child(2) { animation-delay: -1.4s; }
+.link-tile:nth-child(1) { animation-delay: -0.2s; }
+.link-tile:nth-child(2) { animation-delay: -1.2s; }
+.link-tile:nth-child(3) { animation-delay: -2.2s; }
+.link-tile:nth-child(4) { animation-delay: -3.2s; }
+.social-item:nth-child(1) { animation-delay: -0.5s; }
+.social-item:nth-child(2) { animation-delay: -1.5s; }
+.social-item:nth-child(3) { animation-delay: -2.5s; }
+
+/* Hover effects */
+.project-card:hover,
+.edu-item:hover,
+.research-card:hover,
+.art-card:hover,
+.marketing-card:hover,
+.bio-card:hover,
+.link-tile:hover,
+.social-item:hover,
+.badge:hover,
+.skill-jar:hover {
+  animation: wiggle 0.5s ease !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px -10px rgba(105, 180, 255, 0.4);
+  border-color: #aef7ff;
+  z-index: 10;
+}
+
+  </style>
+</head>
+<script>
+// Skill Jar Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const skills = document.querySelectorAll('.skill');
+  const jar = document.getElementById('skillJar');
+  const jarContent = document.getElementById('jarContent');
+  const collectedSpan = document.getElementById('collectedCount');
+  const totalSpan = document.getElementById('totalSkills');
+  const liquid = document.querySelector('.jar-liquid');
+  
+  let collectedSkills = [];
+  totalSpan.textContent = skills.length;
+  
+  // Make skills draggable
+  skills.forEach(skill => {
+    skill.setAttribute('draggable', 'true');
+    
+    skill.addEventListener('dragstart', function(e) {
+      e.dataTransfer.setData('text/plain', this.textContent.trim());
+      this.style.opacity = '0.5';
+    });
+    
+    skill.addEventListener('dragend', function(e) {
+      this.style.opacity = '1';
+    });
+  });
+  
+  // Jar drop zone
+  jar.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    this.style.transform = 'scale(1.05)';
+    this.style.borderColor = '#ffd700';
+  });
+  
+  jar.addEventListener('dragleave', function(e) {
+    this.style.transform = '';
+    this.style.borderColor = '#00a9a4';
+  });
+  
+  jar.addEventListener('drop', function(e) {
+    e.preventDefault();
+    this.style.transform = '';
+    
+    const skillName = e.dataTransfer.getData('text/plain').trim();
+    
+    // Check if already collected
+    if (!collectedSkills.includes(skillName)) {
+      collectedSkills.push(skillName);
+      
+      // Add to jar
+      const skillBadge = document.createElement('span');
+      skillBadge.className = 'collected-skill';
+      skillBadge.textContent = skillName;
+      jarContent.appendChild(skillBadge);
+      
+      // Update counter
+      collectedSpan.textContent = collectedSkills.length;
+      
+      // Fill liquid
+      const percentage = (collectedSkills.length / skills.length) * 100;
+      liquid.style.height = percentage + '%';
+      
+      // Remove placeholder if exists
+      const placeholder = jarContent.querySelector('.jar-placeholder');
+      if (placeholder) placeholder.remove();
+      
+      // Celebration effect
+      createConfetti();
+      
+      // Remove original skill
+      const original = Array.from(skills).find(s => s.textContent.trim() === skillName);
+      if (original) {
+        original.style.display = 'none';
+      }
+    }
+    
+    this.style.borderColor = '#00a9a4';
+  });
+  
+  // Reset function
+  window.resetJar = function() {
+    collectedSkills = [];
+    jarContent.innerHTML = '<span class="jar-placeholder">✨ drag skills here ✨</span>';
+    collectedSpan.textContent = '0';
+    liquid.style.height = '0%';
+    
+    // Show all skills again
+    skills.forEach(skill => {
+      skill.style.display = 'inline-block';
+    });
+    
+    // Confetti poof
+    createConfetti('🧹');
+  };
+  
+  function createConfetti(emoji = '✨') {
+    for (let i = 0; i < 20; i++) {
+      const confetti = document.createElement('span');
+      confetti.innerHTML = emoji;
+      confetti.style.position = 'fixed';
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.top = '-100px';
+      confetti.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      confetti.style.pointerEvents = 'none';
+      confetti.style.animation = `confettiFall ${1 + Math.random()}s ease-out forwards`;
+      confetti.style.zIndex = '9999';
+      document.body.appendChild(confetti);
+      
+      setTimeout(() => confetti.remove(), 2000);
+    }
+  }
+});
+</script>
+</html>
+</body>
+</html>
+  
+  <!-- floating art + math dots -->
+  <div class="floating-dots">
+    <div class="dot" style="top: 8%; left: 10%;"></div>
+    <div class="dot" style="top: 50%; right: 12%; animation-delay: 3s; background: #b9997a;"></div>
+    <div class="dot" style="bottom: 15%; left: 18%; width: 14px; height: 14px;"></div>
+    <div class="dot" style="bottom: 30%; right: 28%; background: #4f8b85;"></div>
+  </div>
+
+  <div class="card">
+    <!-- ===== MULTI‑PAGE SIMULATION: TABLE OF CONTENTS (links to anchors) ===== -->
+    <div class="page-indicator">
+      <span class="page-pill"><i class="fa-regular fa-compass"></i> multi‑page view</span>
+    </div>
+    <div class="toc-wrapper">
+  <a href="#about-lisa" class="toc-item"><i class="fa-regular fa-face-smile"></i> About</a></span>
+  <a href="#education" class="toc-item"><i class="fa-solid fa-graduation-cap"></i> Education</a></span>
+  <a href="#featured-projects" class="toc-item"><i class="fa-solid fa-flask"></i> Featured Projects</a></span>
+  <!-- CHANGE THIS: Split into two separate items -->
+  <a href="#research" class="toc-item"><i class="fa-solid fa-microscope"></i> Research</a>  <!-- New -->
+  <a href="#art" class="toc-item"><i class="fa-solid fa-paintbrush"></i> Art</a>  <!-- New -->
+  <a href="#skills" class="toc-item"><i class="fa-solid fa-wrench"></i> Skills</a>
+  <a href="#connect" class="toc-item"><i class="fa-regular fa-paper-plane"></i> Connect</a>
+</div>
+
+    <!-- **** PROFILE HEADER – Lisa Liu (actual name) **** -->
+    <div class="profile-header" id="about-lisa">
+      <div class="profile-image-container">
+        <!-- artistic portrait placeholder (abstract illustration) -->
+    <svg class="profile-image" viewBox="0 0 100 100" fill="none">
+    <!-- Face -->
+      <circle cx="50" cy="40" r="26" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1.2"/>
+      <!-- Body -->
+      <path d="M22 78 L78 78 L68 48 L32 48 Z" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1"/>
+      <!-- Nose area -->
+      <circle cx="50" cy="40" r="9" fill="#00898B"/>
+      <!-- Eyes (keep your signature teal) -->
+      <circle cx="36" cy="34" r="3.5" fill="#2c5f5a"/>
+      <circle cx="64" cy="34" r="3.5" fill="#2c5f5a"/>
+      <!-- Mouth -->
+      <path d="M44 47 L56 47 L53 54 L47 54 Z" fill="#00898B"/>
+      <!-- Smile line -->
+      <path d="M30 60 Q50 70, 70 60" stroke="#CCCCCC" stroke-width="2" fill="#ffffff"/>
+  </svg>
+      </div>
+      <div class="name-title">
+        <div class="name">Qingyang<span style="color:#55fff9;">(Lisa)</span>Liu</div>
+        <div class="badge-container">
+          <span class="badge"><i class="fa-solid fa-atom"></i> Mathematics & Science</span>
+          <span class="badge"><i class="fa-solid fa-paintbrush"></i> Illustration + Design</span>
+          <span class="badge"><i class="fa-solid fa-robot"></i> AI Research</span>
+          <span class="badge"><i class="fa-solid fa-music"></i> Music/Composition</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- **** ABOUT ME – tailored exactly from resume **** -->
+    <div class="bio-card page-section" id="about"> 
+      <div class="highlight-text">
+        <i class="fa-solid fa-feather" style="color: #00b6b0; font-size: 1.7rem; float: left; margin-right: 15px;"></i>
+        <h1 style="font-family: 'Brush Script MT', cursive; font-size: 50px;color: #00a9a4;"><i class="fa-solid fa-university"></i> UC Berkeley '29</h1>
+            <strong>B.A. Applied Mathematics & Physics · Minors in Education & Data Science</strong> <br><br>
+        ✦ Researcher · Developer · Educator · Artist · Musician<br>
+        ✦ I build bridges between <span style="background:#55fff9; padding:0.2rem 0.8rem; border-radius:30px;">complex systems</span>, 
+        <span style="background:#55fff9; padding:0.2rem 0.8rem; border-radius:30px;">AI‑assisted creation</span>, and 
+        <span style="background:#55fff9; padding:0.2rem 0.8rem; border-radius:30px;">visual storytelling</span>.
+        <div class="signature"><strong>— science meets art, iteratively —</strong></div>
+      </div>
+    </div>
+
+    <!-- **** EDUCATION + relevant coursework (exact from resume) **** -->
+    <div class="page-section" id="education">
+      <div class="section-title"><i class="fa-regular fa-compass"></i> EDUCATION · INTERDISCIPLINARY CORE</div>
+      <div class="education-grid">
+        <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-square-root-variable"></i></div><h3>Applied Math</h3><p>Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Math, Dynamics Systems</p></div>
+        <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-flask"></i></div><h3>Physics</h3><p>Mechanics, E&M, Experimental Physics, Optics & Waves, Quantum Foundations</p></div>
+        <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-database"></i></div><h3>Data Science</h3><p>Foundations of DS, Data Struct, R, Python, AI Metrics</p></div>
+        <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-chalkboard"></i></div><h3>Education</h3><p>Calteach, Learning Tools Dev, Pedagogy Research</p></div>
+      </div>
+    </div>
+
+    <!-- **** FEATURED PROJECTS – from resume (chess, suno, etc) **** -->
+    <div class="page-section" id="featured-projects">
+      <div class="section-title"><i class="fa-regular fa-star"></i> AI + FULL STACK + SIMULATION</div>
+      <div class="project-cards">
+        <!-- Replace the Chess Project Card with this -->
+  <div class="project-card" onclick="window.open('https://github.com/lisaliu060306-art/webserver', '_blank')">
+    <div class="project-icon"><i class="fa-solid fa-chess-board"></i></div>
+    <h4>Full‑Stack Chess Web Server</h4>
+    <p style="color:#000000;">Python, JavaScript, CSS, HTML · Browser UI, Move Validation, Real-Time Play Undo, Highlights, Reset.</p>
+    <div class="project-tags">
+      <span class="tag">github/lisaliu060306-art/webserver</span>
+      <span class="tag">deployed</span>
+    </div>
+    <div class="learn-more" style="margin-top: 1rem;">
+      <a href="https://github.com/lisaliu060306-art/webserver" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+        View on GitHub →
+      </a>
+    </div>
+  </div>
+
+  <!-- Suno Music Card -->
+  <div class="project-card" onclick="window.open('https://suno.com/@elizaliuartist', '_blank')">
+    <div class="project-icon"><i class="fa-solid fa-music"></i></div>
+    <h4>AI‑Assisted Music Pipeline</h4>
+    <p style="color:#000000;">Suno + Python + DAW · signal processing, harmonics, 10+ compositions. Reproducible refinement.</p>
+    <div class="project-tags">
+      <span class="tag">suno.com/@elizaliuartist</span>
+      <span class="tag">DSP</span>
+      <span class="tag">DAW</span>
+    </div>
+    <div class="learn-more" style="margin-top: 1rem;">
+      <a href="https://suno.com/@elizaliuartist" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+        Listen to Compositions →
+      </a>
+    </div>
+  </div>
+
+  <!-- Wind Turbine Card (add your actual COSMOS link) -->
+  <div class="project-card" onclick="window.open('https://drive.google.com/drive/folders/1-IGItxh8npIyaLLZKPBSp_hykcVDVfnz', '_blank')">
+    <div class="project-icon"><i class="fa-solid fa-wind"></i></div>
+    <h4>Wind Turbine Blade (COSMOS)</h4>
+    <p style="color:#000000;">CAD, Aerodynamic Sim, 20+ Prototypes · Dashboards, 2nd place & Best Presentation.</p>
+    <div class="project-tags">
+      <span class="tag">Structural Engineering</span>
+      <span class="tag">Data Visualization</span>
+    </div>
+    <div class="learn-more" style="margin-top: 1rem;">
+      <a href="https://drive.google.com/drive/folders/1-IGItxh8npIyaLLZKPBSp_hykcVDVfnz" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+        View Project →
+      </a>
+    </div>
+  </div>
+
+  <!-- Vibration Analysis Card -->
+  <div class="project-card" onclick="window.open('https://docs.google.com/presentation/d/1KB7geH_uKAR0FVtk-LwEFnRPT3jv3pTq/edit?usp=drivesdk&ouid=101100003983991770605&rtpof=true&sd=true', '_blank')">
+    <div class="project-icon"><i class="fa-solid fa-signal"></i></div>
+    <h4>Structural Vibration Analysis (UCLA)</h4>
+    <p style="color:#000000;">Simulated Vibration, Developed 3D Models, Python-Assisted Heatmaps</p>
+    <div class="project-tags">
+      <span class="tag">Mechanical Engineering</span>
+      <span class="tag">Theory Derivation</span>
+    </div>
+    <div class="learn-more" style="margin-top: 1rem;">
+      <a href="https://docs.google.com/presentation/d/1KB7geH_uKAR0FVtk-LwEFnRPT3jv3pTq/edit?usp=drivesdk&ouid=101100003983991770605&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+        View My Presentation→
+      </a>
+    </div>
+    </div>
+  </div>
+    <div style="margin-bottom: 2.5rem;"></div>
+
+    <!-- **** RESEARCH & CREATIVE EXPERIENCE (illustrator, URAP, judge) **** -->
+    <div class="page-section" id="research">
+      <div class="section-title"><i class="fas fa-flask"></i> RESEARCH & ENGINEERING</div>
+      <style>
+    /* Add these styles in your head section or in a CSS file */
+    .research-card {
+      background: rgb(255, 255, 255);
+      border-radius: 30px;
+      padding: 1.7rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      border-left: 8px solid #007484; 
+    }
+    
+    .research-card:hover {
+      background: #2df8ff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .research-card:hover h3,
+    .research-card:hover p,
+    .research-card:hover .skill-tag {
+      color: #000; /* Changes text to black for better contrast on turquoise */
+    }
+    
+    .research-card:hover .skill-tag {
+      background: white !important; /* Makes skill tags white on hover */
+      color: #000 !important;
+    }
+    
+    .research-card:hover .learn-more {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+    
+    .skill-tag {
+      background: #2df8ff;
+      padding: 0.2rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .learn-more {
+      margin-top: 1rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      display: inline-block;
+      font-weight: 600;
+    }
+    
+    .learn-more a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .learn-more a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Keep the original layout */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+    }
+      .art-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    margin-top: 0rem;
+  }
+
+  .art-card {
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 1.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border-left: 8px solid #007484;  /* Pink accent to distinguish from research */
+  }
+
+  .art-card:hover {
+    background: #2df8ff;  /* Soft pink hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .art-card:hover h3,
+  .art-card:hover p,
+  .art-card:hover .skill-tag {
+    color: #000;
+  }
+
+  .art-card:hover .skill-tag {
+    background: white !important;
+    color: #000 !important;
+  }
+
+  .art-card .learn-more {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+  }
+@keyframes gentleFloat {
+  0% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-3px) translateX(1px); }
+  50% { transform: translateY(-1px) translateX(-2px); }
+  75% { transform: translateY(2px) translateX(1px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* Optional: faster, more energetic movement */
+@keyframes floatAround {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  33% { transform: translate(3px, -4px) rotate(1deg); }
+  66% { transform: translate(-2px, 3px) rotate(-1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+  </style>
+
+  <div class="cards-grid">
+    <!-- URAP Card -->
+    <div class="research-card" onclick="window.open('https://urapprojects.berkeley.edu/detail.php?id=19807-1', '_blank')">
+      <h3 style="display: flex; gap: 8px; margin-top: 0;">
+        <i class="fa-solid fa-microchip"></i> URAP @ Berkeley
+      </h3>
+      <p><strong>AI‑powered educational tools (Playlab)</strong> – define metrics, usability, pedagogical impact. Compare platforms.</p>
+      <p><span class="skill-tag">Google Sheets · Excel · Zotero</span></p>
+          <div class="learn-more">
+            <a href="https://urapprojects.berkeley.edu/detail.php?id=19807-1" target="_blank" rel="noopener noreferrer">
+              Learn More About The Project→
+          </a>
+        </div>
+      </div>
+      <div class="research-card" onclick="window.open('https://humanjudge.com/ai-reviews', '_blank')">
+        <h3 style="display: flex; gap: 8px; margin-top: 0;">
+          <i class="fa-solid fa-brain"></i> Human Judge AI Empowerment
+        </h3>
+        <p>AI Evaluator: Activate → Vote → Voice, structured feedback for model improvement. Remote.</p>
+        <p><span class="skill-tag">Machine Learning · API</span></p>
+        <div class="learn-more">
+          <a href="https://humanjudge.com/ai-reviews" target="_blank" rel="noopener noreferrer">
+            Learn More About AI Evaluation →
+          </a>
+        </div>
+      </div>
+    </div>
+  <div class="page-section" id="publication">
+  <div class="section-title" style="margin-top: 2rem;"><i class="fa-solid fa-book"></i> PUBLICATION</div>
+      <div class="research-card" onclick="window.open('https://www.researchgate.net/publication/377738785_Existing_Vibration_Control_Techniques_Applied_in_Construction_and_Mechanical_Engineering', '_blank')">
+        <h3 style="display: flex; gap: 8px; margin-top: 0;">
+          <i class="fa-regular fa-file-lines"></i> ICCE Publication 2023
+        </h3>
+        <p>“Existing Vibration Control Techniques …” Co‑authored with R. Shi, L. Lu. Peer‑reviewed.</p>
+        <p><span class="skill-tag">Literature Review · Numerical Modeling</span></p>
+        <div class="learn-more">
+          <a href="https://www.researchgate.net/publication/377738785_Existing_Vibration_Control_Techniques_Applied_in_Construction_and_Mechanical_Engineering" target="_blank" rel="noopener noreferrer">
+            Read The Publication →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="page-section" id="art">
+  <div class="section-title" style="margin-top: 2rem;"><i class="fa-solid fa-paintbrush"></i> ART & ILLUSTRATION</div>
+  <div class="art-grid">
+    <!-- Daily Californian Card -->
+    <div class="art-card" onclick="window.open('https://www.dailycal.org/', '_blank')">
+      <h3 style="display: flex; gap: 8px; margin-top: 0;">
+        <i class="fa-regular fa-newspaper"></i> Illustrator – The Daily Californian
+      </h3>
+      <p>Weekly editorial illustrations, digital tools, ideation with writers. Translate complex themes.</p>
+      <p><span class="skill-tag">Typography · Diagramming · Gradients</span></p>
+      <div class="learn-more">
+        <a href="https://www.dailycal.org/" target="_blank" rel="noopener noreferrer">
+          See My Work at The Daily Cal →
+        </a>
+      </div>
+    </div>
+    
+    <!-- Art Portfolio Card -->
+    <div class="art-card" onclick="window.open('https://drive.google.com/drive/folders/1-Dr3PRprQrZzKF76tb07MZlhTnDh-kWO', '_blank')">
+      <h3 style="display: flex; gap: 8px; margin-top: 0;">
+        <i class="fa-regular fa-image"></i> Full Design Portfolio
+      </h3>
+      <p>Complete collection of illustrations, digital art, and design work. Editorial pieces, brand visuals, and creative projects.</p>
+      <p><span class="skill-tag">Procreate · Illustrator · Figma · Canva</span></p>
+      <div class="learn-more">
+        <a href="https://drive.google.com/drive/folders/1-Dr3PRprQrZzKF76tb07MZlhTnDh-kWO" target="_blank" rel="noopener noreferrer">
+          View Full Portfolio →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add spacing after art section -->
+<div style="margin-bottom: 2.5rem;"></div>
+
+<div style="margin: 2.5rem 0 1.8rem;">
+  <div class="section-title"><i class="fa-regular fa-lightbulb"></i> MARKETING</div>
+  
+  <div class="marketing-grid">
+    <!-- Grangou Card -->
+    <div class="marketing-card" onclick="window.open('https://drive.google.com/drive/folders/1-mCa-quLFsM_Yic0m5b2vpUHRmtJ2TWm', '_blank')">
+      <div class="marketing-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <h4>Grangou</h4>
+      <p>Marketing Communication · Static Posts, Graphic Design, Brand Visuals</p>
+      <span class="marketing-tag">Graphic Design</span>
+      <span class="marketing-tag">Social Media</span>
+      <div style="margin: 8px 0 4px 0; font-size: 0.9rem;">
+    <a href="https://www.grangouapp.com/" target="_blank" rel="noopener noreferrer" style="color: #00605f; text-decoration: underline; text-underline-offset: 2px;" onclick="event.stopPropagation();">
+      <i class="fa-solid fa-globe"></i> grangouapp.com
+    </a>
+  </div>
+      <div class="learn-more-link">
+        <a href="https://drive.google.com/drive/folders/1-mCa-quLFsM_Yic0m5b2vpUHRmtJ2TWm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+          View Projects →
+        </a>
+      </div>
+    </div>
+    
+    <!-- Breefly Card -->
+    <div class="marketing-card" onclick="window.open('https://drive.google.com/drive/folders/1-aKwT-u-VukGYVWeoaajeEa1ANKD6vt_', '_blank')">
+      <div class="marketing-icon"><i class="fa-solid fa-rocket"></i></div>
+      <h4>Breefly</h4>
+      <p>Social Campaigns · User Growth Strategy, Content Creation, Analytics</p>
+      <span class="marketing-tag">Growth</span>
+      <span class="marketing-tag">Campaigns</span>
+       <div style="margin: 8px 0 4px 0; font-size: 0.9rem;">
+    <a href="https://breefly.org/" target="_blank" rel="noopener noreferrer" style="color: #00605f; text-decoration: underline; text-underline-offset: 2px;" onclick="event.stopPropagation();">
+      <i class="fa-solid fa-globe"></i> breefly.org
+    </a>
+  </div>
+      <div class="learn-more-link">
+        <a href="https://drive.google.com/drive/folders/1-aKwT-u-VukGYVWeoaajeEa1ANKD6vt_" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+          View Projects →
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- TOOL & WEB DEVELOPING - FIXED FORMATTING -->
+<div style="margin: 2.5rem 0 1.8rem;">
+  <div class="section-title"><i class="fa-regular fa-lightbulb"></i> TOOL & WEB DEVELOPING</div>
+  
+  <!-- Add marketing-grid class to create 2-column layout -->
+  <div class="marketing-grid">
+    <!-- Calteach TA Card -->
+    <div class="marketing-card" onclick="window.open('https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ', '_blank')">
+      <div class="marketing-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+      <h4>Calteach TA</h4>
+      <p>Learning Tools Development (Python) · +25% Completion Rate, Curriculum Design</p>
+      <div>
+        <span class="marketing-tag">Python</span>
+        <span class="marketing-tag">Education</span>
+        <div style="margin: 8px 0 4px 0; font-size: 0.9rem;">
+      <a href="https://calteach.berkeley.edu/home" target="_blank" rel="noopener noreferrer" style="color: #00605f; text-decoration: underline; text-underline-offset: 2px;" onclick="event.stopPropagation();">
+        <i class="fa-solid fa-globe"></i> Calteach.berkeley
+      </a>
+    </div>
+  </div>
+      <div class="learn-more-link">
+        <a href="https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+          See My Teaching Modules! →
+        </a>
+      </div>
+    </div>
+   
+    <!-- VCHS Physics Club Card -->
+    <div class="marketing-card" onclick="window.open('https://www.mobileapp.app/to/9TzKSCx?ref=cl', '_blank')">
+      <div class="marketing-icon"><i class="fa-solid fa-atom"></i></div>
+      <h4>VCHS Physics Club</h4>
+      <p>VP & Web Developer · 10+ Interactive Simulations, +40% Engagement</p>
+      <div>
+        <span class="marketing-tag">Python</span>
+        <span class="marketing-tag">Education</span>
+        <div style="margin: 8px 0 4px 0; font-size: 0.9rem;">
+      <a href=" https://vchsphysics.wixsite.com/vchsphysicsclub" target="_blank" rel="noopener noreferrer" style="color: #00605f; text-decoration: underline; text-underline-offset: 2px;" onclick="event.stopPropagation();">
+        <i class="fa-solid fa-globe"></i> vchsphysics.com
+      </a>
+    </div>
+  </div>
+      <div class="learn-more-link">
+        <a href="https://drive.google.com/drive/folders/102O3EUV03pBWY_tYsfuB6lH0hc-tugm9" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+          Check Out My Presentations! →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- **** SKILLS: both tech + ARTISTIC (ceramics? illustration, DAW, Procreate, Figma) **** -->
+    <div class="page-section" id="skills">
+      <div class="section-title"><i class="fa-regular fa-object-group"></i> TECH & ART SKILLS </div>
+      <div class="skill-ecosystem">
+        <div class="skill-cluster">
+          <span class="cluster-title"><i class="fa-regular fa-keyboard"></i> <b>Programming</span></b>
+          <div class="skill-cloud">
+            <span class="skill"> Python</span>
+            <span class="skill">R</span>
+            <span class="skill">Java</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Excel</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <span class="cluster-title"><i class="fa-solid fa-brush"></i> <b>Design & Illustration</span></b>
+          <div class="skill-cloud">
+            <span class="skill">Illustrator</span>
+            <span class="skill">Procreate</span>
+            <span class="skill">Figma</span>
+            <span class="skill">Canva</span>
+            <span class="skill">Digital Sketching</span>
+            <span class="skill">Editorial Illustration</span>
+            
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <span class="cluster-title"><i class="fa-solid fa-gear"></i> <b>Tools & Domains</span></b>
+          <div class="skill-cloud">
+            <span class="skill">CAD</span><span class="skill">DAW</span><span class="skill">DSP</span>
+            <span class="skill">OpenAI API</span><span class="skill">Simulation</span>
+            <span class="skill">Data Analysis</span><span class="skill">Audio Processing</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <span class="cluster-title"><i class="fa-regular fa-heart"></i><b> Artistic / Maker</span></b>
+          <div class="skill-cloud">
+            <span class="skill">Music Composition</span><span class="skill">Brand Visual</span>
+            <span class="skill">Social Assets</span><span class="skill">Storyboarding</span>
+            <span class="skill">UX Design</span><span class="skill">Dashboards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+            <!-- Second row: Centered Skill Jar -->
+          <div style="margin: 1rem 0 3rem 0; text-align: center;">
+  <div style="background: white; padding: 2.5rem; border-radius: 60px; max-width: 500px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,169,164,0.2);">
+    
+    <div style="font-size: 1.5rem; color: #054a47; margin-bottom: 1.5rem;">
+      <i class="fa-regular fa-object-group"></i> <b>Make Your Own Skill Jar!</b>
+    </div>
+    
+    <div class="skill-jar-container" style="display: flex; flex-direction: column; align-items: center; margin: 0;">
+      <!-- Jar -->
+      <div class="skill-jar" id="skillJar" style="width: 280px; height: 280px; margin: 0 auto; position: relative;">
+        <div class="jar-liquid"></div>
+        <div class="jar-content" id="jarContent" style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1rem; align-content: flex-start; justify-content: center;">
+          <span class="jar-placeholder" style="color: #00a9a4; font-style: italic; opacity: 0.7; text-align: center; width: 100%; margin-top: 40%;">
+            ✨ Drag Skills Here ✨
+          </span>
+        </div>
+        <div class="jar-shine"></div>
+      </div>
+      
+      <!-- Collected count -->
+      <div class="jar-stats" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <span style="background: #f0f0f0; padding: 0.5rem 1.5rem; border-radius: 50px; border: 2px dashed #00a9a4; font-size: 1rem;">
+          <span id="collectedCount">0</span> / <span id="totalSkills">0</span> Skills Collected
+        </span>
+        <button class="reset-jar-btn" onclick="resetJar()" style="background: white; border: 2px solid #00a9a4; padding: 0.5rem 1.5rem; border-radius: 50px; cursor: pointer; font-size: 1rem;">
+          <i class="fa-solid fa-rotate-left"></i> Empty Jar
+        </button>
+      </div>
+      
+      <!-- Instructions -->
+      <p style="color: #054a47; margin-top: 1rem; font-size: 0.95rem; opacity: 0.8;">
+        <i class="fa-regular fa-hand-pointer"></i> Drag any skill bubble from above into the jar!
+      </p>
+    </div>
+  </div>
+</div>
+   
+    <!-- **** LINKS: github, linkedin, suno, design portfolio, etc – real from resume **** -->
+   
+    <!-- **** LINKS: github, linkedin, suno, design portfolio, etc – real from resume **** -->
+    <div class="section-title"><i class="fas fa-handshake"></i>CONNECT WITH ME (:D)</div>
+    <div class="links-grid" id="connect">
+      <a href="https://linkedin.com/in/qingyangliu36" class="link-tile" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin/qingyangliu36</a>
+      <a href="https://github.com/lisaliu060306-art" class="link-tile" target="_blank"><i class="fa-brands fa-github"></i> lisaliu060306-art</a>
+      <a href="https://www.instagram.com/lisaliu0306/" class="link-tile" target="_blank"><i class="fa-brands fa-instagram"></i> lisaliu0306</a>
+      <a href="mailto:lisaliu20060306@berkeley.edu" class="link-tile"><i class="fa-brands fa-google"></i> lisaliu20060306@berkeley.edu</a>
+    </div>

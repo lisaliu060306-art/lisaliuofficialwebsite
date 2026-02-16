@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Liu · music ✦ portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-link { padding: 0.8rem 1rem; border-radius: 30px; background: white; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #054a47; transition: all 0.3s; }
+    .nav-link:hover { background: #2df8ff; transform: translateX(5px); }
+    .section-header { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 2px solid; padding-bottom: 0.5rem; }
+    .music-card { animation: float 6s ease-in-out infinite; transition: all 0.3s ease; }
+    .music-card:hover { animation: none; transform: translateY(-10px) scale(1.02); }
+    .playlist-item { display: flex; align-items: center; gap: 1rem; padding: 0.8rem; background: white; border-radius: 50px; margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="floating-dots">
+    <div class="dot" style="top: 8%; left: 10%;"></div>
+    <div class="dot" style="top: 50%; right: 12%;"></div>
+  </div>
+
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+    
+    <!-- LEFT SIDE COLUMN - NAVIGATION -->
+    <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 100px; height: 100px; border-radius: 40% 60% 65% 35%; background: linear-gradient(145deg, #008a78, #55fff9); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✦</div>
+        <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #054a47; margin: 0;">Lisa Liu</h3>
+        <div style="font-size: 0.9rem; color: #00605f; background: rgba(255,255,255,0.5); padding: 0.3rem; border-radius: 20px; margin-top: 0.3rem;">UC Berkeley '29</div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #00605f; border-bottom-color: #00605f;">
+          <i class="fa-solid fa-briefcase"></i> Professional
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="research.html" class="nav-link"><i class="fa-solid fa-microscope"></i> Research</a>
+          <a href="projects.html" class="nav-link"><i class="fa-solid fa-flask"></i> Projects</a>
+          <a href="art.html" class="nav-link"><i class="fa-solid fa-paintbrush"></i> Art</a>
+          <a href="marketing.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Marketing</a>
+          <a href="teaching.html" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+          <a href="skills.html" class="nav-link"><i class="fa-solid fa-wrench"></i> Skills</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #ff6b6b; border-bottom-color: #ff6b6b;">
+          <i class="fa-regular fa-heart"></i> Personal
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="music.html" class="nav-link" style="background: #2df8ff;"><i class="fa-solid fa-music"></i> Music</a>
+          <a href="gallery.html" class="nav-link"><i class="fa-regular fa-images"></i> Gallery</a>
+          <a href="journal.html" class="nav-link"><i class="fa-regular fa-pen-to-square"></i> Journal</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-header" style="color: #4ecdc4; border-bottom-color: #4ecdc4;">
+          <i class="fa-solid fa-link"></i> Connect
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="https://linkedin.com/in/qingyangliu36" class="nav-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/lisaliu060306-art" class="nav-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/lisaliu0306/" class="nav-link" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="mailto:lisaliu20060306@berkeley.edu" class="nav-link"><i class="fa-regular fa-envelope"></i> Email</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="display: inline-block; padding: 0.6rem 1.5rem; background: #2df8ff; color: #054a47; border-radius: 40px; text-decoration: none; font-weight: 600;">
+          <i class="fa-regular fa-face-smile"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - MUSIC CONTENT -->
+    <div style="flex: 1;">
+      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-music" style="font-size: 2rem; color: #ff6b6b;"></i>
+        <span>MY MUSIC WORLD</span>
+      </div>
+      
+      <!-- Featured Music Card -->
+      <!-- Featured Music Card - with image -->
+      <div class="music-card" onclick="window.open('https://suno.com/@elizaliuartist', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ff6b6b; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
+        <div style="flex: 0 0 150px; height: 150px; border-radius: 30px; overflow: hidden; background: #f8f8f8;">
+          <img src="https://menlovc.com/wp-content/uploads/2025/11/suno_thumbnail.jpg" 
+              alt="Suno AI Music" 
+              style="width: 100%; height: 100%; object-fit: cover;"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-headphones\' style=\'font-size: 4rem; color: white; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: linear-gradient(135deg, #ff6b6b, #ff9ff3);\'></i>';">
+        </div>
+        <div style="flex: 1;">
+          <h2 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.8rem;">AI-Assisted Compositions</h2>
+          <p style="font-size: 1.1rem; color: #333;">10+ original pieces created with Suno + DAW. Signal processing, harmonics exploration, and reproducible refinement.</p>
+          <div style="display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Suno</span>
+            <span class="skill-tag">DAW</span>
+            <span class="skill-tag">DSP</span>
+            <span class="skill-tag">Composition</span>
+          </div>
+          <a href="https://suno.com/@elizaliuartist" target="_blank" style="color: #00605f; font-weight: 600; font-size: 1.1rem;">Listen to Compositions →</a>
+        </div>
+      </div>
+      <!-- Music Grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+  <!-- My Playlists Card with Spotify Icon -->
+      <div class="music-card" style="background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #1DB954;">
+        <div style="height: 140px; background: linear-gradient(135deg, #1DB954, #191414); border-radius: 25px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+          <i class="fa-brands fa-spotify"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">My Personal Playlists</h3>
+        <p style="color: #333;">Collections I've curated for studying, painting, coding, and traveling.</p>
+        <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+          <span class="skill-tag">🎵 Study Vibes</span>
+          <span class="skill-tag">🎨 Art Hours</span>
+          <span class="skill-tag">💻 Deep Focus</span>
+          <span class="skill-tag">✈️ Wanderlust</span>
+        </div>
+        <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center;">
+          <span style="color: #666;"><i class="fa-regular fa-clock"></i> 4 playlists</span>
+          <a href="#" style="color: #1DB954; text-decoration: none; font-weight: 600;">Preview on Spotify →</a>
+        </div>
+      </div>
+        <!-- Musical Journey Card -->
+        <div class="music-card" style="background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #ff9ff3;">
+          <div style="height: 140px; background: linear-gradient(135deg, #ff9ff3, #f368e0); border-radius: 25px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Piano & Composition</h3>
+          <p style="color: #333;">Classical training, improvisation, and how music influences my art and science.</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Piano</span>
+            <span class="skill-tag">Theory</span>
+            <span class="skill-tag">Improvisation</span>
+          </div>
+          <a href="journal.html?tag=music" style="color: #00605f;">Read Reflections →</a>
+        </div>
+      </div>
+
+      <!-- Currently Listening - COLORED BUBBLES -->
+      <div style="background: white; border-radius: 30px; padding: 1.5rem; margin-top: 1rem;">
+        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+          <i class="fa-solid fa-circle-play" style="color: #ff6b6b;"></i> 
+          Currently Listening
+        </h3>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <!-- Red/Pink bubble (matches first card border: #ff6b6b) -->
+          <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎬 Movie Soundtracks</span>
+          <!-- Green bubble (matches Spotify card border: #1DB954) -->
+          <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎭 Musicals</span>
+          <!-- Pink bubble (matches piano card border: #ff9ff3) -->
+          <span class="badge" style="background: #ff6b6b; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎻 Classical</span>
+          <!-- Repeating the three colors -->
+          <span class="badge" style="background: #ff6b6b; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎷 Jazz</span>
+          <span class="badge" style="background: #ff6b6b; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎤 Hip-Hop</span>
+          <span class="badge" style="background: #ff6b6b; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">🎸 Slow Pop</span>
+        </div>
+      </div>
+
+      <!-- Favorite Artists - COLORED BUBBLES -->
+      <div style="background: white; border-radius: 30px; padding: 1.5rem; margin-top: 1rem;">
+        <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+          <i class="fa-solid fa-star" style="color: #ff6b6b;"></i> 
+          Favorite Artists
+        </h3>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.1rem;">🎼 Composers</h4>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <span class="badge" style="background: #1DB954; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Randy Newman</span>
+            <span class="badge" style="background: #1DB954; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Hans Zimmer</span>
+            <span class="badge" style="background: #1DB954; color: #f0f0ff; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">John Powell</span>
+            <span class="badge" style="background: #1DB954; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Kris Bowers</span>
+            <span class="badge" style="background: #1DB954; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Justin Hurwitz</span>
+          </div>
+        </div>
+        
+        <div>
+          <h4 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.1rem;">🎤 Vocalists</h4>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <span class="badge" style="background: #ff9ff3; color: #054a47; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Beyoncé</span>
+            <span class="badge" style="background: #ff9ff3; color: #054a47; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Mariah Carey</span>
+            <span class="badge" style="background: #ff9ff3; color: #054a47; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Huang Xiaoyun</span>
+            <span class="badge" style="background: #ff9ff3; color: #054a47; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Zac Efron</span>
+            <span class="badge" style="background: #ff9ff3; color: #054a47; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 500;">Loren Allred</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        
+    ✦ Website designed with 🫧 by Lisa Liu ✦
+        </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Liu · teaching ✦ portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-link { padding: 0.8rem 1rem; border-radius: 30px; background: white; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #054a47; transition: all 0.3s; }
+    .nav-link:hover { background: #2df8ff; transform: translateX(5px); }
+    .section-header { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 2px solid; padding-bottom: 0.5rem; }
+    .teaching-card { animation: float 6s ease-in-out infinite; transition: all 0.3s ease; }
+    .teaching-card:hover { animation: none; transform: translateY(-10px) scale(1.02); }
+    .stat-box { background: white; border-radius: 20px; padding: 1rem; text-align: center; border-left: 8px solid #ffb347; }
+    .teaching-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  </style>
+</head>
+<body>
+  <div class="floating-dots">
+    <div class="dot" style="top: 8%; left: 10%;"></div>
+    <div class="dot" style="top: 50%; right: 12%;"></div>
+  </div>
+
+  <div class="card" style="display: flex; gap: 2rem; padding: 2rem; max-width: 1400px;">
+    
+    <!-- LEFT SIDE COLUMN - NAVIGATION -->
+    <div style="flex: 0 0 260px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 40px; padding: 2rem 1.5rem; height: fit-content; border: 1px solid rgba(0, 169, 164, 0.3);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 100px; height: 100px; border-radius: 40% 60% 65% 35%; background: linear-gradient(145deg, #008a78, #55fff9); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✦</div>
+        <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #054a47; margin: 0;">Lisa Liu</h3>
+        <div style="font-size: 0.9rem; color: #00605f; background: rgba(255,255,255,0.5); padding: 0.3rem; border-radius: 20px; margin-top: 0.3rem;">UC Berkeley '29</div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #00605f; border-bottom-color: #00605f;">
+          <i class="fa-solid fa-briefcase"></i> Professional
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="research.html" class="nav-link"><i class="fa-solid fa-microscope"></i> Research</a>
+          <a href="projects.html" class="nav-link"><i class="fa-solid fa-flask"></i> Projects</a>
+          <a href="art.html" class="nav-link"><i class="fa-solid fa-paintbrush"></i> Art</a>
+          <a href="marketing.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Marketing</a>
+          <a href="teaching.html" class="nav-link" style="background: #2df8ff;"><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+          <a href="skills.html" class="nav-link"><i class="fa-solid fa-wrench"></i> Skills</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="section-header" style="color: #ff6b6b; border-bottom-color: #ff6b6b;">
+          <i class="fa-regular fa-heart"></i> Personal
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="music.html" class="nav-link"><i class="fa-solid fa-music"></i> Music</a>
+          <a href="gallery.html" class="nav-link"><i class="fa-regular fa-images"></i> Gallery</a>
+          <a href="journal.html" class="nav-link"><i class="fa-regular fa-pen-to-square"></i> Journal</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-header" style="color: #4ecdc4; border-bottom-color: #4ecdc4;">
+          <i class="fa-solid fa-link"></i> Connect
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="https://linkedin.com/in/qingyangliu36" class="nav-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/lisaliu060306-art" class="nav-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/lisaliu0306/" class="nav-link" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="mailto:lisaliu20060306@berkeley.edu" class="nav-link"><i class="fa-regular fa-envelope"></i> Email</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="display: inline-block; padding: 0.6rem 1.5rem; background: #2df8ff; color: #054a47; border-radius: 40px; text-decoration: none; font-weight: 600;">
+          <i class="fa-regular fa-face-smile"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - TEACHING CONTENT -->
+    <div style="flex: 1;">
+      <div class="section-title" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-chalkboard-user" style="font-size: 2rem; color: #ffb347;"></i> 
+        <span>TEACHING & MENTORSHIP</span>
+      </div>
+      
+      <!-- Featured Teaching Card -->
+      <div class="teaching-card" onclick="window.open('https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.8rem; border-left: 8px solid #ffb347; margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center;">
+        <div style="flex: 0 0 150px; height: 150px; border-radius: 30px; overflow: hidden; background: #f8f8f8;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOzC3O4rJxj29QlC8R46lIa5L7nKAYwfrXw&s" 
+              alt="Calteach TA" 
+              style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
+        </div>
+        <div style="flex: 1;">
+          <h2 style="color: #054a47; margin-bottom: 0.5rem; font-size: 1.8rem;">Calteach TA @ Berkeley</h2>
+          <p style="font-size: 1.1rem; color: #333;">Learning Tools Development (Python) · +25% Completion Rate, Curriculum Design, Student Mentorship</p>
+          <div style="display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Curriculum Design</span>
+            <span class="skill-tag">Mentorship</span>
+            <span class="skill-tag">Assessment</span>
+          </div>
+          <a href="https://drive.google.com/drive/folders/109upCQ_lSOslcyL4YBJSTWCaMjLhCqeJ" target="_blank" style="color: #00605f; font-weight: 600; font-size: 1.1rem;">View Teaching Modules →</a>
+        </div>
+      </div>
+
+      <!-- Teaching Grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+        <!-- Physics Club Card -->
+        <div class="teaching-card" onclick="window.open('https://drive.google.com/drive/folders/102O3EUV03pBWY_tYsfuB6lH0hc-tugm9', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #ffb347;">
+          <div style="height: 140px; border-radius: 25px; margin-bottom: 1rem; overflow: hidden; background: #f8f8f8;">
+            <img src="https://drive.google.com/thumbnail?id=1mR9j4pcTl7874Tf4JddkYUqTTb1RSWRs&sz=w1000" 
+                 alt="VCHS Physics Club" 
+                 style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">VCHS Physics Club</h3>
+          <p style="color: #333;">VP & Web Developer · 10+ Interactive Simulations, +40% Engagement, Led Workshops</p>
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Simulations</span>
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Web Dev</span>
+          </div>
+          <a href="https://drive.google.com/drive/folders/102O3EUV03pBWY_tYsfuB6lH0hc-tugm9" target="_blank" style="color: #00605f; font-weight: 600;">View Presentations →</a><br>
+          <a href="https://vchsphysics.wixsite.com/vchsphysicsclub" target="_blank" style="color: #00605f; font-weight: 600;" onclick="event.stopPropagation();">View Website →</a>
+          </div>
+        <!-- Tutoring Card -->
+        <div class="teaching-card" onclick="window.open('https://www.vcs.net/high-school/high-school-academics/student-support-services', '_blank')" style="cursor: pointer; background: white; border-radius: 30px; padding: 1.5rem; border-left: 8px solid #ffb347;">
+  <div style="height: 140px; border-radius: 25px; margin-bottom: 1rem; overflow: hidden; background: #f8f8f8;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNhpFAZb0D-K4-whzh6WTPpO6G7VfLstIKg&s" 
+         alt="Peer Tutoring" 
+         style="width: 90%; height: 90%; object-fit: contain; margin: 5%;">
+  </div>
+      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Peer Tutoring</h3>
+      <p style="color: #333;">Math & Physics Tutor · 2+ years experience, Small Group & Individual Sessions</p>
+      <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+        <span class="skill-tag">Calculus</span>
+        <span class="skill-tag">Physics</span>
+        <span class="skill-tag">Algebra</span>
+        <span class="skill-tag">Geometry</span>
+        <span class="skill-tag">Communication</span>
+        <span class="skill-tag">Evaluation</span>
+      </div>
+      <a href="https://www.vcs.net/high-school/high-school-academics/student-support-services" target="_blank" style="color: #00605f; font-weight: 600;" onclick="event.stopPropagation();">Learn More →</a>
+    </div>
+  </div>
+
+      <!-- Teaching Stats -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;">
+        <div class="stat-box">
+          <div style="font-size: 2.5rem; color: #ffb347; font-weight: bold;">2+</div>
+          <div style="font-size: 1rem; color: #054a47;">Years Teaching</div>
+        </div>
+        <div class="stat-box">
+          <div style="font-size: 2.5rem; color: #ffb347; font-weight: bold;">50+</div>
+          <div style="font-size: 1rem; color: #054a47;">Students</div>
+        </div>
+        <div class="stat-box">
+          <div style="font-size: 2.5rem; color: #ffb347; font-weight: bold;">25%</div>
+          <div style="font-size: 1rem; color: #054a47;">Completion Rate ↑</div>
+        </div>
+      </div>
+      
+      <!-- Website Footer -->
+      <div style="text-align: center; font-family: 'Caveat', cursive; font-size: 1.2rem; color: #4ecdc4; margin-top: 2rem; padding: 1rem 1rem 2rem; border-top: 1px solid rgba(78, 205, 196, 0.3); width: 100%;">
+        ✦ Website designed with 🫧 by Lisa Liu ✦
+      </div>
+    </div>
+  </div>
+</body>
+</html>
