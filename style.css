@@ -1008,3 +1008,260 @@ body::after {
   content: "✧ ✦ ✧";
   opacity: 0.5;
 }
+/* ===== RESPONSIVE DESIGN FIXES ===== */
+/* Add this at the end of your style.css file */
+
+/* Base responsive improvements */
+* {
+  box-sizing: border-box;
+}
+
+/* Tablet styles (iPads and screens up to 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 1rem;
+    align-items: flex-start; /* Better for scrolling on tablets */
+  }
+  
+  .card {
+    padding: 1.8rem !important;
+    border-radius: 40px !important;
+  }
+  
+  /* Adjust the main card flex layout */
+  .card[style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+  
+  /* Left sidebar becomes full width on tablets */
+  .card > div:first-child {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  
+  /* Adjust sidebar layout for better tablet view */
+  .card > div:first-child > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Professional and Personal sections side by side */
+  .card > div:first-child > div:nth-child(2),
+  .card > div:first-child > div:nth-child(3) {
+    grid-column: span 1;
+  }
+  
+  /* Name size adjustment */
+  .name {
+    font-size: 4rem !important;
+  }
+  
+  /* Education grid - 2 columns on tablet */
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Project cards */
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile styles (phones) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0.8rem;
+  }
+  
+  .card {
+    padding: 1.2rem !important;
+    border-radius: 30px !important;
+  }
+  
+  /* Stack sidebar sections vertically on mobile */
+  .card > div:first-child > div {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Profile header adjustments */
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem !important;
+  }
+  
+  .profile-image-container {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto;
+  }
+  
+  .name {
+    font-size: 2.8rem !important;
+    text-align: center;
+  }
+  
+  .badge-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .badge {
+    padding: 0.3rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* Bio card adjustments */
+  .bio-card {
+    padding: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  .highlight-text {
+    font-size: 1rem !important;
+  }
+  
+  .highlight-text h1 {
+    font-size: 2rem !important;
+  }
+  
+  /* Education grid - 1 column on mobile */
+  .education-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Section titles */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Project cards - 1 column */
+  .project-cards {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Cards grid */
+  .cards-grid,
+  .art-grid,
+  .marketing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Skill ecosystem */
+  .skill-ecosystem {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+  
+  /* Links grid */
+  .links-grid {
+    justify-content: center;
+  }
+  
+  .link-tile {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Social links */
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Skill jar */
+  .skill-jar {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  
+  /* Hide floating dots on mobile for cleaner look */
+  .floating-dots {
+    display: none;
+  }
+  
+  /* Make navigation items more touch-friendly */
+  .toc-item {
+    padding: 0.8rem !important;
+    min-height: 44px; /* Apple's recommended touch target size */
+  }
+  
+  /* Footer */
+  .footer-content {
+    font-size: 1.1rem !important;
+    padding: 0.6rem 1.5rem !important;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: 2.2rem !important;
+  }
+  
+  .badge {
+    width: 100%;
+    margin: 2px 0;
+  }
+  
+  .badge-container {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .card {
+    padding: 1rem !important;
+  }
+  
+  /* Adjust profile image for very small screens */
+  .profile-image-container {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  /* Make skill tags more compact */
+  .skill-tag, .skill {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Hide background symbols on very small screens */
+  body::before,
+  body::after {
+    display: none;
+  }
+  
+  /* Section titles */
+  .section-title {
+    font-size: 1.3rem !important;
+    flex-wrap: wrap;
+  }
+}
+
+/* Fix for the main card flex layout - add this inline style override */
+.card[style*="display: flex"] {
+  flex-wrap: wrap !important;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch-friendly improvements */
+a, button, .toc-item, .badge, .skill-tag, .link-tile {
+  -webkit-tap-highlight-color: rgba(0, 169, 164, 0.2);
+}
+
+/* Fix for iOS font scaling */
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Improve scrolling on mobile */
+html {
+  -webkit-overflow-scrolling: touch;
+}
