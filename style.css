@@ -1008,10 +1008,7 @@ body::after {
   content: "✧ ✦ ✧";
   opacity: 0.5;
 }
-/* ===== RESPONSIVE DESIGN FIXES ===== */
-/* Add this at the end of your style.css file */
 
-/* Base responsive improvements */
 * {
   box-sizing: border-box;
 }
@@ -1177,7 +1174,6 @@ body::after {
     height: 250px !important;
   }
   
-  /* Hide floating dots on mobile for cleaner look */
   .floating-dots {
     display: none;
   }
@@ -1220,14 +1216,12 @@ body::after {
     width: 100px !important;
     height: 100px !important;
   }
-  
-  /* Make skill tags more compact */
+
   .skill-tag, .skill {
     padding: 0.3rem 0.8rem !important;
     font-size: 0.8rem !important;
   }
   
-  /* Hide background symbols on very small screens */
   body::before,
   body::after {
     display: none;
@@ -1240,7 +1234,6 @@ body::after {
   }
 }
 
-/* Fix for the main card flex layout - add this inline style override */
 .card[style*="display: flex"] {
   flex-wrap: wrap !important;
 }
@@ -1251,17 +1244,69 @@ img {
   height: auto;
 }
 
-/* Touch-friendly improvements */
 a, button, .toc-item, .badge, .skill-tag, .link-tile {
   -webkit-tap-highlight-color: rgba(0, 169, 164, 0.2);
 }
 
-/* Fix for iOS font scaling */
 body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Improve scrolling on mobile */
 html {
   -webkit-overflow-scrolling: touch;
+}
+
+
+
+.toc-item i, .nav-link i {
+    color: #008f87 !important;  
+}
+.toc-item:visited, .nav-link:visited {
+    color: #054a47 !important;  
+}
+
+.toc-item:visited i, .nav-link:visited i {
+    color: #008f87 !important; 
+}
+
+/* Hover states */
+.toc-item:hover, .nav-link:hover {
+    color: #007769 !important;  
+    background: #2df8ff;
+}
+
+.toc-item:hover i, .nav-link:hover i {
+    color: #008f87 !important;  
+}
+
+
+.personal-section i,
+a[href="music.html"] i, 
+a[href="gallery.html"] i, 
+a[href="journal.html"] i,
+a[href="music.html"]:visited i, 
+a[href="gallery.html"]:visited i, 
+a[href="journal.html"]:visited i,
+.personal-section .toc-item i,
+.personal-section .nav-link i {
+    color: #ff6b6b !important;  
+}
+.personal-section .toc-item,
+.personal-section .nav-link,
+a[href="music.html"], 
+a[href="gallery.html"], 
+a[href="journal.html"],
+a[href="music.html"]:visited, 
+a[href="gallery.html"]:visited, 
+a[href="journal.html"]:visited {
+    color: #054a47 !important;  /* Dark text */
+}
+
+.personal-section .toc-item:hover,
+.personal-section .nav-link:hover,
+a[href="music.html"]:hover, 
+a[href="gallery.html"]:hover, 
+a[href="journal.html"]:hover {
+    color: #007769 !important;  
+    background: #2df8ff; 
 }
